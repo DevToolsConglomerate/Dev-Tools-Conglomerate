@@ -1,0 +1,49 @@
+/* Custom styles for DevTools Conglomerate */
+
+/* Ensure smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom focus styles for accessibility */
+button:focus,
+input:focus,
+a:focus {
+    outline: 2px solid #6366f1;
+    outline-offset: 2px;
+}
+
+/* Dark mode styles */
+.dark body {
+    background-color: #1f2937;
+    color: #f9fafb;
+}
+
+.dark nav {
+    background-color: #374151;
+}
+
+.dark .bg-white {
+    background-color: #374151;
+    color: #f9fafb;
+}
+
+.dark .text-gray-900 {
+    color: #f9fafb;
+}
+
+.dark .text-gray-600 {
+    color: #d1d5db;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Hover effects for cards */

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevTools Conglomerate - All APIs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Top Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <h2 class="text-2xl font-bold text-indigo-600">DevTools</h2>
+                </div>
+                <div class="flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                    <a href="dashboard.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Dashboard</a>
+                    <a href="all-apis.html" class="text-indigo-600 border-b-2 border-indigo-600 px-3 py-2 rounded-md text-sm font-medium">All APIs</a>
+                    <a href="docs.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Docs</a>
+                    <a href="https://github.com/DevToolsConglomerate" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Community</a>
+                    <a href="about.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="flex-1 flex flex-col">
+        <!-- Page Header -->
+        <header class="bg-white shadow-sm px-4 sm:px-6 py-4 flex items-center justify-between">
+            <h1 class="text-lg sm:text-xl font-semibold text-gray-900">All APIs</h1>
+            <div class="flex items-center">
+                <button id="search-toggle" class="text-2xl focus:outline-none" aria-label="Toggle search">🔍</button>
+                <div id="search-bar" class="hidden flex items-center space-x-2 ml-4">
+                    <input type="text" placeholder="Search tools..." class="px-3 sm:px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm sm:text-base">
+                    <button class="bg-indigo-600 text-white px-3 sm:px-4 py-2 rounded-lg hover:bg-indigo-700 text-sm sm:text-base">Search</button>
+                </div>
+            </div>
+        </header>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const sidebarToggle = document.getElementById('sidebar-toggle');
+                const sidebar = document.getElementById('sidebar');
+                const searchToggle = document.getElementById('search-toggle');
+                const searchBar = document.getElementById('search-bar');
+                const navLinks = document.querySelectorAll('nav a');
+
+                // Toggle sidebar
+                sidebarToggle.addEventListener('click', () => {
+                    sidebar.classList.toggle('-translate-x-full');
+                });
+
+                // Close sidebar when nav links are clicked (mobile)
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (window.innerWidth < 768) { // md breakpoint
+                            sidebar.classList.add('-translate-x-full');
+                        }
+                    });
+                });
+
+                // Toggle search bar
+                searchToggle.addEventListener('click', () => {
+                    searchBar.classList.toggle('hidden');
+                });
+
+                // Keyboard accessibility for sidebar toggle button
+                sidebarToggle.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        sidebar.classList.toggle('-translate-x-full');
+                    }
+                });
+
+                // Keyboard accessibility for search toggle button
+                searchToggle.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        searchBar.classList.toggle('hidden');
+                    }
+                });
+            });
+        </script>
+
+        <!-- Main Section -->
+        <main class="flex-1 p-6">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">All APIs</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Security & Code Quality -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View SQL Injection Scanner details">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">SQL Injection Scanner</h3>
+                    <p class="text-gray-600 mb-4">Detects SQL injection vulnerabilities in code strings.</p>
+                    <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">Ready</span>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View SEO Meta Validator details">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">SEO Meta Validator</h3>
+                    <p class="text-gray-600 mb-4">Analyzes and suggests improvements for HTML meta tags.</p>
+                    <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View Code Complexity Analyzer details">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Code Complexity Analyzer</h3>
+                    <p class="text-gray-600 mb-4">Calculates cyclomatic complexity for a function.</p>
+                    <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View Dependency Vulnerability Checker details">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Dependency Vulnerability Checker</h3>
+                    <p class="text-gray-600 mb-4">Checks package.json/requirements.txt against known vulnerabilities.</p>
+                    <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                </div>
+
+                <!-- Data & Format Conversion -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View JSON-to-XML Converter details">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">JSON-to-XML Converter</h3>
+                    <p class="text-gray-600 mb-4">Converts JSON to XML and vice-versa.</p>
+                    <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View YAML Validator Formatter details">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">YAML Validator Formatter</h3>
+                    <p class="text-gray-600 mb-4">Validates and beautifies YAML.</p>
+                    <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View CSV-to-JSON API details">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">CSV-to-JSON API</h3>
+                    <p class="text-gray-600 mb-4">Converts CSV strings to JSON arrays.</p>
+                    <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View Image Format Converter details">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Image Format Converter</h3>
+                    <p class="text-gray-600 mb-4">Converts image formats using free tier services.</p>
+                    <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View PDF Text Extractor details">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">PDF Text Extractor</h3>
+                    <p class="text-gray-600 mb-4">Extracts text from PDF files.</p>
+                    <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                </div>
+
+                <!-- DevOps & Infrastructure -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View Dockerfile Generator details">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Dockerfile Generator</h3>
+                    <p class="text-gray-600 mb-4">Generates a Dockerfile based on language and framework.</p>
+                    <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View Nginx Config Generator details">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Nginx Config Generator</h3>
+                    <p class="text-gray-600 mb-4">Creates a basic Nginx config for a web app.</p>
+                    <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View Let's Encrypt Bot Simulator details">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Let's Encrypt Bot Simulator</h3>
+                    <p class="text-gray-600 mb-4">Simulates the certificate issuance process for troubleshooting.</p>
+                    <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View Git Command Helper details">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Git Command Helper</h3>
+                    <p class="text-gray-600 mb-4">Explains complex git commands in simple terms.</p>
+                    <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                </div>
+
+                <!-- Algorithm & Helper Functions -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View UUID Generator details">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">UUID Generator</h3>
+                    <p class="text-gray-600 mb-4">Generates batches of UUIDs.</p>
+                    <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View Password Strength API details">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Password Strength API</h3>
+                    <p class="text-gray-600 mb-4">Checks password strength and breaches.</p>
+                    <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View Hash Generator details">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Hash Generator</h3>
+                    <p class="text-gray-600 mb-4">Hashes text with multiple algorithms (MD5, SHA256, etc.).</p>
+                    <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View Unit Test Generator details">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Unit Test Generator</h3>
+                    <p class="text-gray-600 mb-4">Generates basic unit test skeletons for simple functions.</p>
+                    <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View Color Converter API details">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Color Converter API</h3>
+                    <p class="text-gray-600 mb-4">Converts between HEX, RGB, HSL, etc.</p>
+                    <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View Fake User Generator details">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Fake User Generator</h3>
+                    <p class="text-gray-600 mb-4">Generates fake user data for testing.</p>
+                    <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">Complete</span>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevTools Conglomerate - Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Top Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <h2 class="text-2xl font-bold text-indigo-600">DevTools</h2>
+                </div>
+                <div class="flex items-center space-x-8">
+                    <a href="/index.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                    <a href="/dashboard.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Dashboard</a>
+                    <a href="/all-apis.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">All APIs</a>
+                    <a href="/docs.html" class="text-indigo-600 border-b-2 border-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Docs</a>
+<a href="https://github.com/DevToolsConglomerate" target="_blank" rel="noopener noreferrer" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Community</a>
+                    <a href="/about.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="flex-1 flex flex-col">
+        <!-- Page Header -->
+        <header class="bg-white shadow-sm px-4 sm:px-6 py-4">
+            <h1 class="text-lg sm:text-xl font-semibold text-gray-900">Documentation</h1>
+        </header>
+
+
+
+        <!-- Main Section -->
+        <main class="flex-1 p-6 overflow-y-auto">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8">DevTools Conglomerate Documentation</h2>
+
+                <section class="mb-8">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Getting Started</h3>
+                    <p class="text-gray-600 mb-4">Welcome to the DevTools Conglomerate! This platform provides a collection of developer tools and APIs to streamline your development process.</p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>Browse available APIs on the Dashboard</li>
+                        <li>View detailed documentation for each tool</li>
+                        <li>Access completed projects and their repositories</li>
+                        <li>Join our community on GitHub</li>
+                    </ul>
+                </section>
+
+                <section class="mb-8">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Available APIs</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Security Tools</h4>
+                            <p class="text-gray-600 mb-4">Tools for detecting vulnerabilities and ensuring code security.</p>
+                            <ul class="text-gray-600 space-y-1">
+                                <li>• SQL Injection Scanner</li>
+                                <li>• XSS Scanner</li>
+                                <li>• Dependency Vulnerability Checker</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Data Processing</h4>
+                            <p class="text-gray-600 mb-4">Tools for converting and processing various data formats.</p>
+                            <ul class="text-gray-600 space-y-1">
+                                <li>• JSON-to-XML Converter</li>
+                                <li>• CSV-to-JSON API</li>
+                                <li>• YAML Validator Formatter</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">DevOps Tools</h4>
+                            <p class="text-gray-600 mb-4">Infrastructure and deployment utilities.</p>
+                            <ul class="text-gray-600 space-y-1">
+                                <li>• Dockerfile Generator</li>
+                                <li>• Nginx Config Generator</li>
+                                <li>• Git Command Helper</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Utility APIs</h4>
+                            <p class="text-gray-600 mb-4">Helper functions and generators for development.</p>
+                            <ul class="text-gray-600 space-y-1">
+                                <li>• UUID Generator</li>
+                                <li>• Password Strength API</li>
+                                <li>• Hash Generator</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-8">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">API Usage Examples</h3>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <pre class="text-sm text-gray-800"><code>// Example: Using the XSS Scanner API
+fetch('/api/xss-scan', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    code: '<script>alert("test");
+
+</script>'
+  })
+})
+.then(response =&gt; response.json())
+.then(data =&gt; console.log(data));</code></pre>
+                    </div>
+                </section>
+
+                <section class="mb-8">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Contributing</h3>
+                    <p class="text-gray-600 mb-4">We welcome contributions from the developer community! Here's how you can get involved:</p>
+                    <ol class="list-decimal list-inside text-gray-600 space-y-2">
+                        <li>Fork the repository on GitHub</li>
+                        <li>Create a feature branch for your changes</li>
+                        <li>Submit a pull request with detailed description</li>
+                        <li>Follow our coding standards and guidelines</li>
+                    </ol>
+                </section>
+
+                <section>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Support</h3>
+                    <p class="text-gray-600">For questions, issues, or suggestions, please visit our <a href="https://github.com/DevToolsConglomerate" class="text-indigo-600 hover:underline">GitHub repository</a> and open an issue.</p>
+                </section>
+            </div>
+        </main>
+    </div>
+
+
+<script src="/docs.92adbb2b.js"></script></body></html>

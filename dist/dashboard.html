@@ -1,0 +1,63 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevTools Conglomerate - Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Top Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <h2 class="text-2xl font-bold text-indigo-600">DevTools</h2>
+                </div>
+                <div class="flex items-center space-x-8">
+                    <a href="/index.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                    <a href="/dashboard.html" class="text-indigo-600 border-b-2 border-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Dashboard</a>
+                    <a href="/all-apis.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">All APIs</a>
+                    <a href="/docs.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Docs</a>
+                    <a href="https://github.com/DevToolsConglomerate" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Community</a>
+                    <a href="/about.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="flex-1 flex flex-col">
+        <!-- Page Header -->
+        <header class="bg-white shadow-sm px-4 sm:px-6 py-4">
+            <h1 class="text-lg sm:text-xl font-semibold text-gray-900">Dashboard</h1>
+        </header>
+
+
+
+        <!-- Main Section -->
+        <main class="flex-1 p-6">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Available APIs</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View XSS Scanner details">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">XSS Scanner</h3>
+                    <p class="text-gray-600 mb-4">Detects Cross-Site Scripting vulnerabilities.</p>
+                    <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">Complete</span>
+                    <a href="https://github.com/DevToolsConglomerate/xss-scanner" target="_blank" class="inline-block mt-2 text-indigo-600 hover:underline">View Repository</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View API Factory Orchestrator details">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">API Factory Orchestrator</h3>
+                    <p class="text-gray-600 mb-4">Orchestrates API factory operations for streamlined development.</p>
+                    <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">Complete</span>
+                    <a href="https://github.com/DevToolsConglomerate/api-factory-orchestrator" target="_blank" class="inline-block mt-2 text-indigo-600 hover:underline">View Repository</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View Test Data API details">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Test Data API</h3>
+                    <p class="text-gray-600 mb-4">Provides comprehensive test data for applications.</p>
+                    <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">Complete</span>
+                    <a href="https://github.com/DevToolsConglomerate/test-data-api" target="_blank" class="inline-block mt-2 text-indigo-600 hover:underline">View Repository</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+<script src="/dashboard.4b5ffa44.js"></script></body></html>
