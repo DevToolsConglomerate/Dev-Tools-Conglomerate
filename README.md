@@ -6,7 +6,7 @@ DevTools Conglomerate is an open-source project providing a comprehensive suite 
 
 The frontend consists of five main pages:
 
-- **landing.html**: Marketing-style landing page with hero banner, highlights, and call-to-action buttons.
+
 - **index.html**: Homepage with expanded hero section, project scope, benefits grid, and footer.
 - **dashboard.html**: Dashboard page featuring top navigation bar and a grid of available API tools with status badges.
 - **all-apis.html**: Page listing all APIs with search functionality.

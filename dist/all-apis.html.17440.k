@@ -192,7 +192,7 @@
                 <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View Fake User Generator details">
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Fake User Generator</h3>
                     <p class="text-gray-600 mb-4">Generates fake user data for testing.</p>
-                    <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                    <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">Complete</span>
                 </div>
             </div>
         </main>
