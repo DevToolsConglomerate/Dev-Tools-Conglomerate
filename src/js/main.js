@@ -111,12 +111,47 @@ export function initSearch() {
     }
 }
 
+// XSS Scanner Demo
+export function initXSSScannerDemo() {
+    const scanBtn = document.getElementById('scan-xss');
+    const inputTextarea = document.getElementById('xss-input');
+    const outputTextarea = document.getElementById('xss-output');
+
+    if (scanBtn && inputTextarea && outputTextarea) {
+        scanBtn.addEventListener('click', () => {
+            const input = inputTextarea.value;
+            const result = scanForXSS(input);
+            outputTextarea.value = result ? 'Potential XSS detected!' : 'No XSS detected.';
+        });
+    }
+}
+
+function scanForXSS(input) {
+    // Simple XSS detection logic (for demo purposes)
+    const xssPattern = /<script.*?>.*?<\/script.*?>|on\w+=["'].*?["']/gi;
+    return xssPattern.test(input);
+}
+
 // Initialize all features
 export function init() {
     initNavToggle();
     initDarkMode();
     initFadeIn();
     initSearch();
+    initXSSScannerDemo();
+
+    // Test dark mode compatibility for new elements
+    const demoSection = document.getElementById('scan-xss');
+    if (demoSection) {
+        const observer = new MutationObserver(() => {
+            if (document.documentElement.classList.contains('dark')) {
+                demoSection.classList.add('dark');
+            } else {
+                demoSection.classList.remove('dark');
+            }
+        });
+        observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    }
 }
 
 // Auto-initialize on DOMContentLoaded

@@ -1,4 +1,4 @@
-19896
+19897
 90D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\yargs\build\lib\argsert.js134036508435441156 0
 90D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\postcss-ordered-values\src134036508669836367 1
 108D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\caniuse-lite\data\features\variable-fonts.js134036511225631220 0
@@ -16,7 +16,7 @@
 98D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\@parcel\optimizer-css\package.json134036508462297377 0
 110D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\cypress\node_modules\@types\node\compatibility134036509386498059 1
 75D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\regjsparser134036508519452957 1
-61D:\api-microsaas-template-1\Dev-Tools-Conglomerate\about.html134036962564103769 0
+61D:\api-microsaas-template-1\Dev-Tools-Conglomerate\about.html134040096259163913 0
 108D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\rxjs\dist\esm\internal\operators\take.js.map134036511439934138 0
 95D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\caniuse-lite\data\regions\NI.js134036511145639799 0
 102D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\yaml\dist\compose\resolve-block-seq.js134036509542964089 0
@@ -42,7 +42,7 @@
 63D:\api-microsaas-template-1\Dev-Tools-Conglomerate\package.json134036537567072120 0
 105D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\caniuse-lite\data\features\eventsource.js134036510608916073 0
 109D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\rxjs\dist\esm\internal\operators\skipUntil.js134036511159204826 0
-64D:\api-microsaas-template-1\Dev-Tools-Conglomerate\all-apis.html134036964900150583 0
+64D:\api-microsaas-template-1\Dev-Tools-Conglomerate\all-apis.html134040095822154999 0
 123D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\regenerate-unicode-properties\Script_Extensions\Tagbanwa.js134036510763987466 0
 93D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\istanbul-lib-coverage\LICENSE134036508210332869 0
 108D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\rxjs\dist\esm5\internal\operators\map.js.map134036511409570137 0
@@ -144,7 +144,7 @@
 107D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\css-tree\lib\syntax\node\DeclarationList.js134036509936091618 0
 111D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\rxjs\dist\cjs\internal\scheduler\timerHandle.js134036511203796017 0
 77D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\node-releases134036508352976601 1
-65D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dashboard.html134036961323793720 0
+65D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dashboard.html134040097529577327 0
 101D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\cypress\types\lodash\fp\constant.d.ts134036511181795076 0
 82D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\lodash\toString.js134036511329311890 0
 70D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\@babel134036508147600163 1
@@ -154,7 +154,7 @@
 84D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\resolve-from\license134036508289766495 0
 101D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\yaml\browser\dist\schema\core\bool.js134036508705612801 0
 73D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\is-number134036508282232608 1
-55D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist134036964933644152 1
+55D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist134040100333400435 1
 75D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\.bin\nanoid134036511502994206 0
 95D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\caniuse-lite\data\regions\VU.js134036511236573915 0
 109D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\rxjs\dist\types\internal\observable\race.d.ts134036511485107301 0
@@ -195,12 +195,12 @@
 94D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\lodash\fp\sortedLastIndexBy.js134036511296083502 0
 84D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\lodash\_castSlice.js134036509671085978 0
 117D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\csso\node_modules\css-tree\cjs\parser\SyntaxError.cjs134036509620159861 0
-60D:\api-microsaas-template-1\Dev-Tools-Conglomerate\docs.html134036950348435342 0
+60D:\api-microsaas-template-1\Dev-Tools-Conglomerate\docs.html134040096764492848 0
 81D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\async\anyLimit.js134036508573787373 0
 97D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\yaml\browser\dist\parse\parser.js134036509466370498 0
 94D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\fast-glob\out\utils\array.d.ts134036508866261950 0
 95D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\caniuse-lite\data\regions\DO.js134036510484865598 0
-61D:\api-microsaas-template-1\Dev-Tools-Conglomerate\index.html134036960636474074 0
+61D:\api-microsaas-template-1\Dev-Tools-Conglomerate\index.html134040094282446351 0
 105D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\@parcel\utils\src\generateBuildMetrics.js134036508783749000 0
 79D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\saxes\README.md134036508532899413 0
 97D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\globby\node_modules\slash\license134036508490503797 0
@@ -255,6 +255,14 @@
 127D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\sample-bdb.txt134036509862630806 0
 86D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\getos\tests\alpine\3.3134036508483503204 1
 86D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\yargs\helpers\index.js134036508601458325 0
+112D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\rxjs\dist\esm5\internal\operators\subscribeOn.js134036511164931666 0
+111D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\@babel\plugin-transform-new-target\lib\index.js134036508274668540 0
+109D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\make-dir\node_modules\semver\ranges\subset.js134036509011914724 0
+104D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\@babel\generator\lib\generators\index.js134036508656195841 0
+58D:\api-microsaas-template-1\Dev-Tools-Conglomerate\TODO.md134040038474463738 0
+80D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\postcss-svgo\src134036508630302402 1
+119D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\yaml\browser\dist\compose\util-empty-scalar-position.js134036509814007618 0
+96D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\yaml\dist\parse\cst-stringify.js134036509016399417 0
 112D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\jsdom\lib\jsdom\living\node-document-position.js134036510659305698 0
 104D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\listr2\dist\renderer\verbose.renderer.js134036508948007722 0
 105D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\cypress\types\lodash\common\function.d.ts134036511012466405 0
@@ -297,7 +305,7 @@
 125D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\rxjs\dist\esm5\internal\scheduler\VirtualTimeScheduler.js.map134036511447762241 0
 89D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\postcss-normalize-unicode134036508573907362 1
 106D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\common-tags\lib\TemplateTag\TemplateTag.js134036509636670829 0
-65D:\api-microsaas-template-1\Dev-Tools-Conglomerate\src\js\main.js134036512446399633 0
+65D:\api-microsaas-template-1\Dev-Tools-Conglomerate\src\js\main.js134040081674780408 0
 72D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\dashdash134036508374426056 1
 90D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\whatwg-url\lib\URL-impl.js134036508352716487 0
 84D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\entities\decode.d.ts134036509248899018 0
@@ -316,7 +324,7 @@
 112D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\rxjs\dist\esm\internal\operators\debounce.js.map134036511364126730 0
 91D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\json-schema\lib\validate.js134036508277280572 0
 68D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\csso134036509558773862 1
-69D:\api-microsaas-template-1\Dev-Tools-Conglomerate\src\css\styles.css134036512201668434 0
+69D:\api-microsaas-template-1\Dev-Tools-Conglomerate\src\css\styles.css134040073360762086 0
 119D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\make-dir\node_modules\semver\functions\compare-build.js134036508409912324 0
 123D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\regenerate-unicode-properties\General_Category\Separator.js134036510611882669 0
 109D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\cypress\types\lodash\fp\intersectionWith.d.ts134036511201792239 0
@@ -3181,10 +3189,10 @@
 118D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\csso\node_modules\css-tree\lib\lexer\prepare-tokens.js134036510163308911 0
 118D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\rxjs\dist\cjs\internal\scheduled\scheduleObservable.js134036511151640486 0
 74D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\isexe\test134036508424845245 1
+81D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\tr46\package.json134036508452063995 0
 102D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\@babel\types\lib\asserts\assertNode.js134036508277640551 0
 85D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\rxjs\dist\esm\testing134036511403789430 1
 104D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\rxjs\src\internal\operators\concatMap.ts134036511460348517 0
-81D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\tr46\package.json134036508452063995 0
 100D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\yaml\dist\schema\yaml-1.1\pairs.d.ts134036510062939365 0
 83D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\strip-bom\readme.md134036508319981092 0
 91D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\stylehacks\types\dictionary134036509204052976 1
@@ -3266,9 +3274,6 @@
 88D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\lilconfig\src\index.d.ts134036508580179432 0
 94D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\source-map-support\register.js134036508339565251 0
 95D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\yaml\dist\parse\cst-scalar.d.ts134036509938338983 0
-80D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\postcss-svgo\src134036508630302402 1
-119D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\yaml\browser\dist\compose\util-empty-scalar-position.js134036509814007618 0
-96D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\yaml\dist\parse\cst-stringify.js134036509016399417 0
 81D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\p-limit\readme.md134036508288424437 0
 81D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\rxjs\package.json134036511237073032 0
 84D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\decimal.js\README.md134036508556529408 0
@@ -7431,9 +7436,6 @@
 114D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\rxjs\dist\esm\internal\scheduler\AsyncScheduler.js134036509381699976 0
 118D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\rxjs\dist\esm\internal\scheduler\AsyncScheduler.js.map134036511319225219 0
 114D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\rxjs\dist\esm5\internal\operators\skipWhile.js.map134036511436238590 0
-112D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\rxjs\dist\esm5\internal\operators\subscribeOn.js134036511164931666 0
-111D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\@babel\plugin-transform-new-target\lib\index.js134036508274668540 0
-109D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\make-dir\node_modules\semver\ranges\subset.js134036509011914724 0
 110D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\rxjs\dist\esm5\internal\operators\switchAll.js134036511181088574 0
 88D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\dayjs\plugin\calendar.js134036509114216791 0
 109D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\rxjs\dist\esm5\internal\operators\takeLast.js134036511186411185 0
@@ -7471,8 +7473,8 @@
 108D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\rxjs\dist\esm5\internal\operators\toArray.js134036511205653927 0
 112D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\rxjs\dist\esm5\internal\operators\toArray.js.map134036511445980806 0
 149D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\pure-rand\lib\esm\distribution\internals\UnsafeUniformArrayIntDistributionInternal.js134036508832191249 0
-111D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\rxjs\dist\esm5\internal\operators\window.js.map134036511449028032 0
 117D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\jsdom\lib\jsdom\living\nodes\HTMLInputElement-impl.js134036510047790979 0
+111D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\rxjs\dist\esm5\internal\operators\window.js.map134036511449028032 0
 119D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\jsdom\lib\jsdom\living\generated\HTMLOptGroupElement.js134036510206607367 0
 80D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\pump\.travis.yml134036508423895718 0
 115D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\rxjs\dist\esm5\internal\operators\windowTime.js.map134036511449447637 0
@@ -14804,7 +14806,7 @@
 82D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\css-tree\README.md134036510392201188 0
 113D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\cssstyle\lib\properties\webkitBorderAfterColor.js134036509378510898 0
 89D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\dayjs\esm\locale\sv-fi.js134036510602563409 0
-69D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\all-apis.html134036964932547461 0
+69D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\all-apis.html134040100333070424 0
 86D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\dayjs\esm\locale\sv.js134036510606436573 0
 96D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\cypress\types\lodash\remove.d.ts134036510615160977 0
 107D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\@swc\helpers\src\_sliced_to_array_loose.mjs134036511034827485 0
@@ -18066,7 +18068,7 @@
 135D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\@parcel\node-resolver-core\node_modules\semver\ranges\max-satisfying.js134036508798528216 0
 102D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\@babel\plugin-syntax-optional-chaining134036508289725716 1
 128D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\@parcel\node-resolver-core\node_modules\semver\ranges\outside.js134036508841410044 0
-66D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\about.html134036964932543531 0
+66D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\about.html134040100333060519 0
 129D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\@parcel\node-resolver-core\node_modules\semver\ranges\simplify.js134036508987611053 0
 128D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\@parcel\node-resolver-core\node_modules\semver\internal\debug.js134036508545794684 0
 131D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\@babel\plugin-transform-member-expression-literals\lib\index.js.map134036508295232420 0
@@ -19696,7 +19698,6 @@
 114D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\@babel\generator\lib\generators\expressions.js.map134036508596270174 0
 103D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\@babel\generator\lib\generators\flow.js134036508616462685 0
 107D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\@babel\generator\lib\generators\flow.js.map134036508639623589 0
-104D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\@babel\generator\lib\generators\index.js134036508656195841 0
 102D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\@babel\generator\lib\generators\jsx.js134036508684282597 0
 106D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\@babel\generator\lib\generators\jsx.js.map134036508702059653 0
 106D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\@babel\generator\lib\generators\methods.js134036508717511556 0
@@ -19877,7 +19878,7 @@
 85D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\all-apis.32d69a3e.js.19148.1p134036585990113320 0
 80D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\all-apis.32d69a3e.js.map134036964933604066 0
 90D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\dashboard.4b5ffa44.js.map.25136.3u134036560727923947 0
-70D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\dashboard.html134036964932538395 0
+70D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\dashboard.html134040100333010395 0
 78D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\dashboard.html.20788.6134036524912582017 0
 90D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\Dev-Tools-Conglomerate.3464ddca.js134036964932538395 0
 98D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\Dev-Tools-Conglomerate.3464ddca.js.5000.3g134036574231504389 0
@@ -19885,8 +19886,8 @@
 101D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\Dev-Tools-Conglomerate.3464ddca.js.map.2708.s134036598951571966 0
 72D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\docs.92adbb2b.js134036964932531129 0
 76D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\docs.92adbb2b.js.map134036964933604066 0
-65D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\docs.html134036964932538395 0
-66D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\index.html134036964932547461 0
+65D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\docs.html134040100333050458 0
+66D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\index.html134040100333010395 0
 75D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\landing.7a7f0241.js134036534326815224 0
 68D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\landing.html134036534326803629 0
 76D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\landing.html.20788.0134036524905888187 0
