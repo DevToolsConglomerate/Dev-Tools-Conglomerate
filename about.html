@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
+        darkMode: 'class',
         theme: {
           extend: {
             colors: {
@@ -18,7 +19,7 @@
       }
     </script>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 dark:bg-gray-900">
     <!-- Top Navigation -->
     <nav class="bg-white shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -60,6 +61,41 @@
     </nav>
 
     <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+
+        // Check for saved theme preference or default to light mode
+        const currentTheme = localStorage.getItem('theme') || 'light';
+
+        // Apply the current theme to the document
+        if (currentTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+        }
+
+        // Function to toggle theme
+        function toggleTheme() {
+            const html = document.documentElement;
+            const isDark = html.classList.contains('dark');
+
+            if (isDark) {
+                html.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Add event listeners to theme toggle buttons
+        if (themeToggle) {
+            themeToggle.addEventListener('click', toggleTheme);
+        }
+        if (themeToggleMobile) {
+            themeToggleMobile.addEventListener('click', toggleTheme);
+        }
+
+        // Mobile menu functionality
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
 
@@ -78,57 +114,57 @@
             <!-- What is DevTools Conglomerate? -->
             <section class="py-16 px-4">
                 <div class="max-w-4xl mx-auto">
-                    <h1 class="text-4xl font-bold text-center text-gray-900 mb-8">What is DevTools Conglomerate?</h1>
-                    <p class="text-lg text-gray-700 mb-6">
+                    <h1 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-8">What is DevTools Conglomerate?</h1>
+                    <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">
                         DevTools Conglomerate is an open-source initiative that provides a comprehensive suite of backend and API development tools, built with Python FastAPI. Our mission is to empower developers by offering ready-to-use tools that address common challenges in software development, from security scanning to data conversion and DevOps utilities.
                     </p>
-                    <p class="text-lg text-gray-700">
+                    <p class="text-lg text-gray-700 dark:text-gray-300">
                         We were built to solve repetitive developer pain points, allowing you to focus on what matters most: building innovative applications. By providing high-quality, free tools, we aim to accelerate development cycles and foster a collaborative ecosystem within the tech community.
                     </p>
                 </div>
             </section>
 
             <!-- Benefits to the Community -->
-            <section class="bg-gray-100 py-16 px-4">
+            <section class="bg-gray-100 dark:bg-gray-700 py-16 px-4">
                 <div class="max-w-4xl mx-auto">
-                    <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Benefits to the Community</h2>
+                    <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">Benefits to the Community</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="bg-white p-6 rounded-lg shadow-lg">
-                            <h3 class="text-xl font-bold text-gray-900 mb-4">Accelerates Backend Prototyping</h3>
-                            <p class="text-gray-600">With prebuilt APIs, developers can quickly prototype and test backend functionalities without starting from scratch.</p>
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Accelerates Backend Prototyping</h3>
+                            <p class="text-gray-600 dark:text-gray-300">With prebuilt APIs, developers can quickly prototype and test backend functionalities without starting from scratch.</p>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-lg">
-                            <h3 class="text-xl font-bold text-gray-900 mb-4">Strengthens App Security</h3>
-                            <p class="text-gray-600">Automated scanning tools help identify and mitigate security vulnerabilities early in the development process.</p>
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Strengthens App Security</h3>
+                            <p class="text-gray-600 dark:text-gray-300">Automated scanning tools help identify and mitigate security vulnerabilities early in the development process.</p>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-lg">
-                            <h3 class="text-xl font-bold text-gray-900 mb-4">Saves Developer Time</h3>
-                            <p class="text-gray-600">By eliminating boilerplate code and providing utility tools, we help developers focus on core business logic.</p>
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Saves Developer Time</h3>
+                            <p class="text-gray-600 dark:text-gray-300">By eliminating boilerplate code and providing utility tools, we help developers focus on core business logic.</p>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-lg">
-                            <h3 class="text-xl font-bold text-gray-900 mb-4">Supports Collaboration</h3>
-                            <p class="text-gray-600">As an open-source project, we encourage contributions and foster a collaborative environment for knowledge sharing.</p>
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Supports Collaboration</h3>
+                            <p class="text-gray-600 dark:text-gray-300">As an open-source project, we encourage contributions and foster a collaborative environment for knowledge sharing.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
             <!-- Our Roadmap -->
-            <section class="py-16 px-4">
+            <section class="py-16 px-4 bg-white dark:bg-gray-900">
                 <div class="max-w-4xl mx-auto">
-                    <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Our Roadmap</h2>
+                    <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">Our Roadmap</h2>
                     <div class="space-y-6">
-                        <div class="bg-white p-6 rounded-lg shadow-lg">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">2025: Enhanced Security Tools</h3>
-                            <p class="text-gray-600">Complete development of advanced security scanners and add machine learning-based threat detection.</p>
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">2025: Enhanced Security Tools</h3>
+                            <p class="text-gray-600 dark:text-gray-300">Complete development of advanced security scanners and add machine learning-based threat detection.</p>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-lg">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">2026: AI-Powered Utilities</h3>
-                            <p class="text-gray-600">Integrate AI capabilities into data conversion tools and add intelligent code generation features.</p>
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">2026: AI-Powered Utilities</h3>
+                            <p class="text-gray-600 dark:text-gray-300">Integrate AI capabilities into data conversion tools and add intelligent code generation features.</p>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-lg">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">2027: Cloud Integration</h3>
-                            <p class="text-gray-600">Add support for major cloud platforms and implement serverless deployment options.</p>
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">2027: Cloud Integration</h3>
+                            <p class="text-gray-600 dark:text-gray-300">Add support for major cloud platforms and implement serverless deployment options.</p>
                         </div>
                     </div>
                 </div>
