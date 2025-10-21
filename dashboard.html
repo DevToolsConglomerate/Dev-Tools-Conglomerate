@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
+        darkMode: 'class',
         theme: {
           extend: {
             colors: {
@@ -18,10 +19,10 @@
       }
     </script>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 dark:bg-gray-900">
 
     <!-- Top Navigation -->
-    <nav class="bg-white shadow-sm">
+    <nav class="bg-white dark:bg-gray-800 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
@@ -29,16 +30,26 @@
                 </div>
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                    <a href="index.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
                     <a href="dashboard.html" class="text-indigo-600 border-b-2 border-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Dashboard</a>
-                    <a href="all-apis.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">All APIs</a>
-                    <a href="docs.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Docs</a>
-                    <a href="community.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Community</a>
-                    <a href="about.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                    <a href="all-apis.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">All APIs</a>
+                    <a href="docs.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Docs</a>
+                    <a href="community.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Community</a>
+                    <a href="about.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                    <button id="theme-toggle" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium" aria-label="Toggle dark mode">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                        </svg>
+                    </button>
                 </div>
                 <!-- Mobile Menu Button -->
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-700 hover:text-indigo-600 focus:outline-none focus:text-indigo-600" aria-expanded="false" aria-controls="mobile-menu">
+                <div class="md:hidden flex items-center space-x-2">
+                    <button id="theme-toggle-mobile" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 px-2 py-2 rounded-md text-sm font-medium" aria-label="Toggle dark mode">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                        </svg>
+                    </button>
+                    <button id="mobile-menu-button" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 focus:outline-none focus:text-indigo-600" aria-expanded="false" aria-controls="mobile-menu">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
@@ -46,14 +57,20 @@
                 </div>
             </div>
             <!-- Mobile Menu -->
-            <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+            <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-800 shadow-lg">
                 <div class="px-2 pt-2 pb-3 space-y-1">
-                    <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Home</a>
-                    <a href="dashboard.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Dashboard</a>
-                    <a href="all-apis.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">All APIs</a>
-                    <a href="docs.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Docs</a>
-                    <a href="community.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Community</a>
-                    <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">About</a>
+                    <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 hover:bg-gray-50 dark:hover:bg-gray-700">Home</a>
+                    <a href="dashboard.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 hover:bg-gray-50 dark:hover:bg-gray-700">Dashboard</a>
+                    <a href="all-apis.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 hover:bg-gray-50 dark:hover:bg-gray-700">All APIs</a>
+                    <a href="docs.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 hover:bg-gray-50 dark:hover:bg-gray-700">Docs</a>
+                    <a href="community.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 hover:bg-gray-50 dark:hover:bg-gray-700">Community</a>
+                    <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 hover:bg-gray-50 dark:hover:bg-gray-700">About</a>
+                    <button id="theme-toggle-mobile-menu" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 hover:bg-gray-50 dark:hover:bg-gray-700" aria-label="Toggle dark mode">
+                        <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                        </svg>
+                        Toggle Theme
+                    </button>
                 </div>
             </div>
         </div>
@@ -61,52 +78,52 @@
 
     <!-- Main Content -->
     <main class="flex-1 p-8 overflow-auto max-w-7xl mx-auto w-full">
-        <h1 class="text-3xl font-bold mb-6 text-charcoal">Dashboard</h1>
+        <h1 class="text-3xl font-bold mb-6 text-charcoal dark:text-white">Dashboard</h1>
 
         <!-- Test Data API Demo -->
-        <section class="bg-white p-8 rounded-lg shadow-lg mb-8">
-            <h2 class="text-2xl font-semibold mb-6 text-charcoal">Test Data API Demo</h2>
-            <p class="text-gray-600 mb-4">Generate random test data for your applications.</p>
+        <section class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg mb-8">
+            <h2 class="text-2xl font-semibold mb-6 text-charcoal dark:text-white">Test Data API Demo</h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">Generate random test data for your applications.</p>
             <button id="generateData" class="bg-sea-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-600 transition mb-6">Generate Random Data</button>
-            <div id="dataOutput" class="bg-gray-100 p-4 rounded-md font-mono text-sm overflow-x-auto">
-                <p class="text-gray-500">Click "Generate Random Data" to see sample output.</p>
+            <div id="dataOutput" class="bg-gray-100 dark:bg-gray-600 p-4 rounded-md font-mono text-sm overflow-x-auto">
+                <p class="text-gray-500 dark:text-gray-400">Click "Generate Random Data" to see sample output.</p>
             </div>
         </section>
 
         <!-- Tool Cards Grid -->
         <section>
-            <h2 class="text-2xl font-semibold mb-4 text-charcoal">Security Tools</h2>
+            <h2 class="text-2xl font-semibold mb-4 text-charcoal dark:text-white">Security Tools</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-                <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transform hover:-translate-y-1 transition cursor-pointer">
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow hover:shadow-xl transform hover:-translate-y-1 transition cursor-pointer">
                     <div class="flex items-center mb-4">
                         <svg class="w-8 h-8 text-red-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
                         </svg>
-                        <h3 class="text-xl font-bold text-charcoal">XSS Scanner</h3>
+                        <h3 class="text-xl font-bold text-charcoal dark:text-white">XSS Scanner</h3>
                     </div>
-                    <p class="text-gray-600 mb-4">Detects Cross-Site Scripting vulnerabilities.</p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Detects Cross-Site Scripting vulnerabilities.</p>
                     <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
                     <a href="https://github.com/DevToolsConglomerate/xss-scanner" target="_blank" class="mt-4 w-full bg-sea-blue text-white py-2 rounded hover:bg-teal-600 transition inline-block text-center">Try Now</a>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transform hover:-translate-y-1 transition cursor-pointer">
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow hover:shadow-xl transform hover:-translate-y-1 transition cursor-pointer">
                     <div class="flex items-center mb-4">
                         <svg class="w-8 h-8 text-teal-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M4 3a1 1 0 00-1 1v12a1 1 0 001 1h12a1 1 0 001-1V4a1 1 0 00-1-1H4z"/>
                         </svg>
-                        <h3 class="text-xl font-bold text-charcoal">Test Data API</h3>
+                        <h3 class="text-xl font-bold text-charcoal dark:text-white">Test Data API</h3>
                     </div>
-                    <p class="text-gray-600 mb-4">Provides test data for various scenarios.</p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Provides test data for various scenarios.</p>
                     <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">Completed</span>
                     <a href="https://github.com/DevToolsConglomerate/test-data-api" target="_blank" class="mt-4 w-full bg-sea-blue text-white py-2 rounded hover:bg-teal-600 transition inline-block text-center">Try Now</a>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transform hover:-translate-y-1 transition cursor-pointer">
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow hover:shadow-xl transform hover:-translate-y-1 transition cursor-pointer">
                     <div class="flex items-center mb-4">
                         <svg class="w-8 h-8 text-teal-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M4 3a1 1 0 00-1 1v12a1 1 0 001 1h12a1 1 0 001-1V4a1 1 0 00-1-1H4z"/>
                         </svg>
-                        <h3 class="text-xl font-bold text-charcoal">API Factory Orchestrator</h3>
+                        <h3 class="text-xl font-bold text-charcoal dark:text-white">API Factory Orchestrator</h3>
                     </div>
-                    <p class="text-gray-600 mb-4">Orchestrates API factory workflows.</p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Orchestrates API factory workflows.</p>
                     <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">Completed</span>
                     <a href="https://github.com/DevToolsConglomerate/api-factory-orchestrator" target="_blank" class="mt-4 w-full bg-sea-blue text-white py-2 rounded hover:bg-teal-600 transition inline-block text-center">Try Now</a>
                 </div>
@@ -115,6 +132,25 @@
     </main>
 
     <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+        const themeToggleMobileMenu = document.getElementById('theme-toggle-mobile-menu');
+
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        }
+
+        // Load saved theme
+        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        }
+
+        themeToggle.addEventListener('click', toggleTheme);
+        themeToggleMobile.addEventListener('click', toggleTheme);
+        themeToggleMobileMenu.addEventListener('click', toggleTheme);
+
         // Test Data Generation
         document.getElementById('generateData').addEventListener('click', function() {
             const data = {
