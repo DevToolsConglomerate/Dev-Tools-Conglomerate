@@ -4,6 +4,7 @@
     <title>DevTools Conglomerate - Legal</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config = {
+    darkMode: 'class',
     theme: {
         extend: {
             colors: {
@@ -16,30 +17,35 @@
 
 </script>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 dark:bg-gray-900">
 
     <!-- Top Navigation -->
-    <nav class="bg-white shadow-sm">
+    <nav class="bg-white dark:bg-gray-800 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
                     <img src="/Sleek%20Tech%20Logo%20with%20Circuit-Inspired%20Design.cda61b50.png" alt="DevTools Logo" class="w-8 h-8 mr-2">
-                    <h2 class="text-2xl font-bold text-indigo-600">DevTools</h2>
+                    <h2 class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">DevTools</h2>
                 </div>
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="/index.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
-                    <a href="/dashboard.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Dashboard</a>
-                    <a href="/all-apis.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">All APIs</a>
-                    <a href="/docs.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Docs</a>
-                    <a href="/community.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Community</a>
-                    <a href="/blog.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Blog</a>
-                    <a href="/legal.html" class="text-indigo-600 border-b-2 border-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Legal</a>
-                    <a href="/about.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                    <a href="/index.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                    <a href="/dashboard.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium">Dashboard</a>
+                    <a href="/all-apis.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium">All APIs</a>
+                    <a href="/docs.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium">Docs</a>
+                    <a href="/community.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium">Community</a>
+                    <a href="/blog.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium">Blog</a>
+                    <a href="/legal.html" class="text-indigo-600 dark:text-indigo-400 border-b-2 border-indigo-600 dark:border-indigo-400 px-3 py-2 rounded-md text-sm font-medium">Legal</a>
+                    <a href="/about.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                    <button id="theme-toggle" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </button>
                 </div>
                 <!-- Mobile Menu Button -->
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-700 hover:text-indigo-600 focus:outline-none focus:text-indigo-600" aria-expanded="false" aria-controls="mobile-menu">
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 focus:outline-none focus:text-indigo-600 dark:focus:text-indigo-400" aria-expanded="false" aria-controls="mobile-menu">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
@@ -47,16 +53,17 @@
                 </div>
             </div>
             <!-- Mobile Menu -->
-            <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+            <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-800 shadow-lg">
                 <div class="px-2 pt-2 pb-3 space-y-1">
-                    <a href="/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Home</a>
-                    <a href="/dashboard.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Dashboard</a>
-                    <a href="/all-apis.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">All APIs</a>
-                    <a href="/docs.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Docs</a>
-                    <a href="/community.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Community</a>
-                    <a href="/blog.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Blog</a>
-                    <a href="/legal.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Legal</a>
-                    <a href="/about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">About</a>
+                    <a href="/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-50 dark:hover:bg-gray-700">Home</a>
+                    <a href="/dashboard.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-50 dark:hover:bg-gray-700">Dashboard</a>
+                    <a href="/all-apis.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-50 dark:hover:bg-gray-700">All APIs</a>
+                    <a href="/docs.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-50 dark:hover:bg-gray-700">Docs</a>
+                    <a href="/community.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-50 dark:hover:bg-gray-700">Community</a>
+                    <a href="/blog.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-50 dark:hover:bg-gray-700">Blog</a>
+                    <a href="/legal.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-50 dark:hover:bg-gray-700">Legal</a>
+                    <a href="/about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-50 dark:hover:bg-gray-700">About</a>
+
                 </div>
             </div>
         </div>
@@ -64,48 +71,70 @@
 
     <script>const mobileMenuButton = document.getElementById('mobile-menu-button');
 const mobileMenu = document.getElementById('mobile-menu');
+const themeToggle = document.getElementById('theme-toggle');
 mobileMenuButton.addEventListener('click', ()=>{
     const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
     mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
     mobileMenu.classList.toggle('hidden');
 });
+function toggleTheme() {
+    document.documentElement.classList.toggle('dark');
+    const isDark = document.documentElement.classList.contains('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    updateThemeIcon(isDark);
+}
+function updateThemeIcon(isDark) {
+    const icons = document.querySelectorAll('#theme-toggle svg');
+    icons.forEach((icon)=>{
+        if (isDark) icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>';
+        else icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>';
+    });
+}
+// Check for saved theme preference or default to light mode
+const savedTheme = localStorage.getItem('theme');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const isDark = savedTheme === 'dark' || !savedTheme && prefersDark;
+if (isDark) document.documentElement.classList.add('dark');
+updateThemeIcon(isDark);
+// Add event listeners to theme toggle buttons
+if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
 
 </script>
 
     <!-- Main Content -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 class="text-3xl font-bold text-charcoal mb-8">Legal Information</h1>
+        <h1 class="text-3xl font-bold text-charcoal dark:text-gray-100 mb-8">Legal Information</h1>
 
-        <section class="bg-white p-8 rounded-lg shadow-lg space-y-8">
+        <section class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg space-y-8">
             <article>
-                <h2 class="text-2xl font-semibold mb-4">Privacy Policy</h2>
-                <p class="text-gray-700 mb-4">
+                <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-gray-100">Privacy Policy</h2>
+                <p class="text-gray-700 dark:text-gray-300 mb-4">
                     Your privacy is important to us. We do not collect personal data without your consent. Any data collected is used solely to improve our services and will not be shared with third parties without your permission.
                 </p>
-                <p class="text-gray-700">
+                <p class="text-gray-700 dark:text-gray-300">
                     We use cookies to enhance user experience. You can control cookie preferences through your browser settings.
                 </p>
             </article>
 
             <article>
-                <h2 class="text-2xl font-semibold mb-4">Terms of Service</h2>
-                <p class="text-gray-700 mb-4">
+                <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-gray-100">Terms of Service</h2>
+                <p class="text-gray-700 dark:text-gray-300 mb-4">
                     By using DevTools Conglomerate services, you agree to comply with our terms and conditions. We reserve the right to update these terms at any time without prior notice.
                 </p>
-                <p class="text-gray-700">
+                <p class="text-gray-700 dark:text-gray-300">
                     Use of our APIs and tools is at your own risk. We provide no warranties and disclaim liability for any damages resulting from use.
                 </p>
             </article>
 
             <article>
-                <h2 class="text-2xl font-semibold mb-4">License</h2>
-                <p class="text-gray-700 mb-4">
+                <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-gray-100">License</h2>
+                <p class="text-gray-700 dark:text-gray-300 mb-4">
                     This project is licensed under the MIT License. You are free to use, copy, modify, merge, publish, distribute, and sublicense copies of the Software under the following conditions. Selling the software or any part of it is not permitted.
                 </p>
-                <ul class="list-disc list-inside text-gray-700 mb-4">
+                <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 mb-4">
                     <li>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</li>
                 </ul>
-                <p class="text-gray-700">
+                <p class="text-gray-700 dark:text-gray-300">
                     THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 </p>
             </article>

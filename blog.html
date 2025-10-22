@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevTools Conglomerate - Blog</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -20,13 +20,12 @@
     </script>
 </head>
 <body class="bg-gray-50 dark:bg-gray-900">
-
     <!-- Top Navigation -->
     <nav class="bg-white dark:bg-gray-800 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
-                    <img src="assets/Sleek Tech Logo with Circuit-Inspired Design.png" alt="DevTools Logo" class="w-8 h-8 mr-2">
+                    <img src="assets/DevTools Conglomerate Tech Logo 1.png" alt="DevTools Logo" class="w-8 h-8 mr-2">
                     <h2 class="text-2xl font-bold text-indigo-600">DevTools</h2>
                 </div>
                 <!-- Desktop Menu -->
@@ -37,7 +36,6 @@
                     <a href="docs.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Docs</a>
                     <a href="community.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Community</a>
                     <a href="blog.html" class="text-indigo-600 border-b-2 border-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Blog</a>
-                    <a href="legal.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Legal</a>
                     <a href="about.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">About</a>
                     <button id="theme-toggle" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium" aria-label="Toggle dark mode">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -46,12 +44,7 @@
                     </button>
                 </div>
                 <!-- Mobile Menu Button -->
-                <div class="md:hidden flex items-center space-x-2">
-                    <button id="theme-toggle-mobile" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 px-2 py-2 rounded-md text-sm font-medium" aria-label="Toggle dark mode">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
-                        </svg>
-                    </button>
+                <div class="md:hidden flex items-center">
                     <button id="mobile-menu-button" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 focus:outline-none focus:text-indigo-600" aria-expanded="false" aria-controls="mobile-menu">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -68,14 +61,7 @@
                     <a href="docs.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 hover:bg-gray-50 dark:hover:bg-gray-700">Docs</a>
                     <a href="community.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 hover:bg-gray-50 dark:hover:bg-gray-700">Community</a>
                     <a href="blog.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 hover:bg-gray-50 dark:hover:bg-gray-700">Blog</a>
-                    <a href="legal.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 hover:bg-gray-50 dark:hover:bg-gray-700">Legal</a>
                     <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 hover:bg-gray-50 dark:hover:bg-gray-700">About</a>
-                    <button id="theme-toggle-mobile-menu" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 hover:bg-gray-50 dark:hover:bg-gray-700" aria-label="Toggle dark mode">
-                        <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
-                        </svg>
-                        Toggle Theme
-                    </button>
                 </div>
             </div>
         </div>
@@ -93,8 +79,6 @@
 
         // Theme toggle functionality
         const themeToggle = document.getElementById('theme-toggle');
-        const themeToggleMobile = document.getElementById('theme-toggle-mobile');
-        const themeToggleMobileMenu = document.getElementById('theme-toggle-mobile-menu');
 
         function toggleTheme() {
             document.documentElement.classList.toggle('dark');
@@ -107,8 +91,6 @@
         }
 
         themeToggle.addEventListener('click', toggleTheme);
-        themeToggleMobile.addEventListener('click', toggleTheme);
-        themeToggleMobileMenu.addEventListener('click', toggleTheme);
     </script>
 
     <!-- Main Content -->

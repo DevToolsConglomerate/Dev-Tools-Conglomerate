@@ -34,3 +34,95 @@ Algorithm & Helper Functions:
 
 
 
+# Theme Toggle Icon Consistency and Mobile Menu Updates
+
+## Tasks
+- [ ] Update index.html: Change initial theme toggle icons to sun, ensure JS handles all toggles
+
+## Functionalities to Implement
+
+### 2. Interactive API Playground
+- **Description**: Add a live code editor on the All APIs page for testing API endpoints.
+- **Why**: Allows users to test APIs directly without leaving the site.
+- **Tasks**:
+  - Create a new section on all-apis.html with a simple code editor (textarea-based).
+  - Add JavaScript to handle API requests via fetch().
+  - Display request/response in formatted JSON.
+  - Include pre-filled examples for each API.
+
+### 3. Search and Filtering for APIs
+- **Description**: Implement search bar and filters on the All APIs page.
+- **Why**: Makes navigation easier for users with specific needs.
+- **Tasks**:
+  - Add search input and filter dropdowns (category, language).
+  - Implement JavaScript filtering logic.
+  - Update the API list dynamically based on search/filter criteria.
+
+### 4. Progressive Web App (PWA) Features
+- **Description**: Enable offline access and installability.
+- **Why**: Enhances mobile experience and user engagement.
+- **Tasks**:
+  - Create manifest.json for app metadata.
+  - Add service worker for caching static assets.
+  - Update HTML with PWA meta tags.
+  - Test installability on supported browsers.
+
+### 5. User Authentication Mockup
+- **Description**: Add login/signup forms with localStorage persistence.
+- **Why**: Fosters community engagement through personalization.
+- **Tasks**:
+  - Create login/signup modal components.
+  - Implement form validation and localStorage for user data.
+  - Add a simple dashboard section showing "favorites" and "usage history".
+  - Integrate with existing pages (e.g., show user info in nav).
+
+### 6. Feedback Widgets
+- **Description**: Add rating and feedback forms for APIs.
+- **Why**: Gathers insights for improvements and shows responsiveness.
+- **Tasks**:
+  - Add star rating component to API cards.
+  - Create feedback form modal.
+  - Store feedback in localStorage (or prepare for backend integration).
+  - Display average ratings on API pages.
+
+### 7. Accessibility Enhancements
+- **Description**: Improve WCAG compliance with ARIA labels and keyboard navigation.
+- **Why**: Ensures inclusivity and broadens user base.
+- **Tasks**:
+  - Add ARIA labels to interactive elements.
+  - Implement keyboard navigation for menus and forms.
+  - Test with screen readers and ensure color contrast.
+  - Add skip-to-content links.
+
+### 8. Community Chat Integration
+- **Description**: Embed a simple chat widget (e.g., Discord embed).
+- **Why**: Builds community around the open-source project.
+- **Tasks**:
+  - Add Discord widget embed to community.html.
+  - Style it to match the site theme.
+  - Ensure it's responsive and accessible.
+
+## Implementation Order
+1. Dark Mode Toggle (quick win, improves UX immediately)
+2. Search and Filtering (enhances existing page)
+3. Interactive API Playground (adds value to API exploration)
+4. Accessibility Enhancements (ongoing, integrate with other changes)
+5. PWA Features (technical foundation)
+6. Feedback Widgets (user engagement)
+7. User Authentication Mockup (requires more JS logic)
+8. Community Chat Integration (external dependency)
+
+## Testing Checklist
+- [ ] Test all features on desktop and mobile
+- [ ] Verify dark mode persistence across sessions
+- [ ] Check API playground with actual endpoints
+- [ ] Ensure search/filter works with API data
+- [ ] Validate PWA installation on Chrome/Android
+- [ ] Test accessibility with keyboard and screen readers
+- [ ] Confirm no console errors in browser dev tools
+
+## Notes
+- All changes should maintain the existing design aesthetic using Tailwind CSS.
+- JavaScript should be modular and avoid global pollution.
+- Prepare code for easy backend integration (e.g., replace localStorage with API calls).
+- Ensure performance is not impacted (lazy load heavy features if needed).

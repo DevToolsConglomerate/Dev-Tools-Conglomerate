@@ -3,10 +3,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevTools Conglomerate - Documentation</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = {
+    darkMode: 'class',
+    theme: {
+        extend: {
+            colors: {
+                charcoal: '#36454F',
+                'sea-blue': '#0077BE'
+            }
+        }
+    }
+};
+
+</script>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 dark:bg-gray-900">
     <!-- Top Navigation -->
-    <nav class="bg-white shadow-sm">
+    <nav class="bg-white dark:bg-gray-800 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
@@ -15,16 +28,27 @@
                 </div>
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="/index.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
-                    <a href="/dashboard.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Dashboard</a>
-                    <a href="/all-apis.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">All APIs</a>
+                    <a href="/index.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                    <a href="/dashboard.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Dashboard</a>
+                    <a href="/all-apis.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">All APIs</a>
                     <a href="/docs.html" class="text-indigo-600 border-b-2 border-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Docs</a>
-                    <a href="/community.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Community</a>
-                    <a href="/about.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                    <a href="/community.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Community</a>
+                    <a href="/blog.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Blog</a>
+                    <a href="/about.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                    <button id="theme-toggle" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </button>
                 </div>
                 <!-- Mobile Menu Button -->
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-700 hover:text-indigo-600 focus:outline-none focus:text-indigo-600" aria-expanded="false" aria-controls="mobile-menu">
+                <div class="md:hidden flex items-center space-x-2">
+                    <button id="theme-toggle-mobile" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-2 py-2 rounded-md text-sm font-medium" aria-label="Toggle dark mode">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </button>
+                    <button id="mobile-menu-button" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 focus:outline-none focus:text-indigo-600 dark:focus:text-indigo-400" aria-expanded="false" aria-controls="mobile-menu">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
@@ -32,14 +56,15 @@
                 </div>
             </div>
             <!-- Mobile Menu -->
-            <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+            <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-800 shadow-lg">
                 <div class="px-2 pt-2 pb-3 space-y-1">
-                    <a href="/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Home</a>
-                    <a href="/dashboard.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Dashboard</a>
-                    <a href="/all-apis.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">All APIs</a>
-                    <a href="/docs.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Docs</a>
-                    <a href="/community.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Community</a>
-                    <a href="/about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">About</a>
+                    <a href="/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 hover:bg-gray-50 dark:hover:bg-gray-700">Home</a>
+                    <a href="/dashboard.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 hover:bg-gray-50 dark:hover:bg-gray-700">Dashboard</a>
+                    <a href="/all-apis.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 hover:bg-gray-50 dark:hover:bg-gray-700">All APIs</a>
+                    <a href="/docs.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 hover:bg-gray-50 dark:hover:bg-gray-700">Docs</a>
+                    <a href="/community.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 hover:bg-gray-50 dark:hover:bg-gray-700">Community</a>
+                    <a href="/blog.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 hover:bg-gray-50 dark:hover:bg-gray-700">Blog</a>
+                    <a href="/about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 hover:bg-gray-50 dark:hover:bg-gray-700">About</a>
                 </div>
             </div>
         </div>
@@ -47,11 +72,35 @@
 
     <script>const mobileMenuButton = document.getElementById('mobile-menu-button');
 const mobileMenu = document.getElementById('mobile-menu');
+const themeToggle = document.getElementById('theme-toggle');
+const themeToggleMobile = document.getElementById('theme-toggle-mobile');
 mobileMenuButton.addEventListener('click', ()=>{
     const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
     mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
     mobileMenu.classList.toggle('hidden');
 });
+function toggleTheme() {
+    document.documentElement.classList.toggle('dark');
+    const isDark = document.documentElement.classList.contains('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    updateThemeIcon(isDark);
+}
+function updateThemeIcon(isDark) {
+    const icons = document.querySelectorAll('#theme-toggle svg, #theme-toggle-mobile svg');
+    icons.forEach((icon)=>{
+        if (isDark) icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>';
+        else icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>';
+    });
+}
+// Check for saved theme preference or default to light mode
+const savedTheme = localStorage.getItem('theme');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const isDark = savedTheme === 'dark' || !savedTheme && prefersDark;
+if (isDark) document.documentElement.classList.add('dark');
+updateThemeIcon(isDark);
+// Add event listeners to theme toggle buttons
+if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
 
 </script>
 
@@ -63,12 +112,12 @@ mobileMenuButton.addEventListener('click', ()=>{
         <!-- Main Section -->
         <main class="flex-1 p-6 overflow-y-auto">
             <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl font-bold text-gray-900 mb-8">DevTools Conglomerate Documentation</h2>
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8">DevTools Conglomerate Documentation</h2>
 
                 <section class="mb-8">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Getting Started</h3>
-                    <p class="text-gray-600 mb-4">Welcome to the DevTools Conglomerate! This platform provides a collection of developer tools and APIs to streamline your development process.</p>
-                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                    <h3 class="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">Getting Started</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Welcome to the DevTools Conglomerate! This platform provides a collection of developer tools and APIs to streamline your development process.</p>
+                    <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2">
                         <li>Browse available APIs on the Dashboard</li>
                         <li>View detailed documentation for each tool</li>
                         <li>Access completed projects and their repositories</li>
@@ -77,39 +126,39 @@ mobileMenuButton.addEventListener('click', ()=>{
                 </section>
 
                 <section class="mb-8">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Available APIs</h3>
+                    <h3 class="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">Available APIs</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="bg-white p-6 rounded-lg shadow-md">
-                            <h4 class="text-xl font-bold text-gray-900 mb-2">Security Tools</h4>
-                            <p class="text-gray-600 mb-4">Tools for detecting vulnerabilities and ensuring code security.</p>
-                            <ul class="text-gray-600 space-y-1">
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                            <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Security Tools</h4>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">Tools for detecting vulnerabilities and ensuring code security.</p>
+                            <ul class="text-gray-600 dark:text-gray-300 space-y-1">
                                 <li>• SQL Injection Scanner</li>
                                 <li>• XSS Scanner</li>
                                 <li>• Dependency Vulnerability Checker</li>
                             </ul>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-md">
-                            <h4 class="text-xl font-bold text-gray-900 mb-2">Data Processing</h4>
-                            <p class="text-gray-600 mb-4">Tools for converting and processing various data formats.</p>
-                            <ul class="text-gray-600 space-y-1">
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                            <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Data Processing</h4>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">Tools for converting and processing various data formats.</p>
+                            <ul class="text-gray-600 dark:text-gray-300 space-y-1">
                                 <li>• JSON-to-XML Converter</li>
                                 <li>• CSV-to-JSON API</li>
                                 <li>• YAML Validator Formatter</li>
                             </ul>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-md">
-                            <h4 class="text-xl font-bold text-gray-900 mb-2">DevOps Tools</h4>
-                            <p class="text-gray-600 mb-4">Infrastructure and deployment utilities.</p>
-                            <ul class="text-gray-600 space-y-1">
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                            <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2">DevOps Tools</h4>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">Infrastructure and deployment utilities.</p>
+                            <ul class="text-gray-600 dark:text-gray-300 space-y-1">
                                 <li>• Dockerfile Generator</li>
                                 <li>• Nginx Config Generator</li>
                                 <li>• Git Command Helper</li>
                             </ul>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-md">
-                            <h4 class="text-xl font-bold text-gray-900 mb-2">Utility APIs</h4>
-                            <p class="text-gray-600 mb-4">Helper functions and generators for development.</p>
-                            <ul class="text-gray-600 space-y-1">
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                            <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Utility APIs</h4>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">Helper functions and generators for development.</p>
+                            <ul class="text-gray-600 dark:text-gray-300 space-y-1">
                                 <li>• UUID Generator</li>
                                 <li>• Password Strength API</li>
                                 <li>• Hash Generator</li>
@@ -119,9 +168,9 @@ mobileMenuButton.addEventListener('click', ()=>{
                 </section>
 
                 <section class="mb-8">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">API Usage Examples</h3>
-                    <div class="bg-gray-100 p-4 rounded-lg">
-                        <pre class="text-sm text-gray-800"><code>// Example: Using the XSS Scanner API
+                    <h3 class="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">API Usage Examples</h3>
+                    <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg">
+                        <pre class="text-sm text-gray-800 dark:text-gray-200"><code>// Example: Using the XSS Scanner API
 fetch('/api/xss-scan', {
   method: 'POST',
   headers: {
@@ -139,9 +188,9 @@ fetch('/api/xss-scan', {
                 </section>
 
                 <section class="mb-8">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Contributing</h3>
-                    <p class="text-gray-600 mb-4">We welcome contributions from the developer community! Here's how you can get involved:</p>
-                    <ol class="list-decimal list-inside text-gray-600 space-y-2">
+                    <h3 class="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">Contributing</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">We welcome contributions from the developer community! Here's how you can get involved:</p>
+                    <ol class="list-decimal list-inside text-gray-600 dark:text-gray-300 space-y-2">
                         <li>Fork the repository on GitHub</li>
                         <li>Create a feature branch for your changes</li>
                         <li>Submit a pull request with detailed description</li>
@@ -150,8 +199,8 @@ fetch('/api/xss-scan', {
                 </section>
 
                 <section>
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Support</h3>
-                    <p class="text-gray-600">For questions, issues, or suggestions, please visit our <a href="https://github.com/DevToolsConglomerate" class="text-indigo-600 hover:underline">GitHub repository</a> and open an issue.</p>
+                    <h3 class="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">Support</h3>
+                    <p class="text-gray-600 dark:text-gray-300">For questions, issues, or suggestions, please visit our <a href="https://github.com/DevToolsConglomerate" class="text-indigo-600 hover:underline">GitHub repository</a> and open an issue.</p>
                 </section>
             </div>
         </main>
