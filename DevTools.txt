@@ -49,6 +49,17 @@ Algorithm & Helper Functions:
   - Implement JavaScript filtering logic.
   - Update the API list dynamically based on search/filter criteria.
 
+  Testing needed for Web UI changes:
+
+Test search functionality across different API names and descriptions
+Verify category filtering works correctly for each API type
+Test status filtering with different badge combinations
+Check responsive behavior on mobile/tablet/desktop
+Verify dark mode compatibility
+Test accessibility with keyboard navigation
+Confirm results counter updates accurately
+Test clear filters functionality
+
 ### 4. Progressive Web App (PWA) Features
 - **Description**: Enable offline access and installability.
 - **Why**: Enhances mobile experience and user engagement.

@@ -165,7 +165,9 @@ export function initAPISearchFilter() {
         'Hash Generator': 'algorithm',
         'Unit Test Generator': 'algorithm',
         'Color Converter API': 'algorithm',
-        'Fake User Generator': 'algorithm'
+        'Fake User Generator': 'algorithm',
+        'Test Data API': 'algorithm',
+        'API Factory Orchestrator': 'algorithm'
     };
 
     // Filter function
