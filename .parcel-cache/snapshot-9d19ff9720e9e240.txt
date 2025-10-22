@@ -1,4 +1,4 @@
-19931
+19933
 120D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\regenerate-unicode-properties\Script_Extensions\Limbu.js134036509941153445 0
 98D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\@parcel\optimizer-css\package.json134036508462297377 0
 110D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\cypress\node_modules\@types\node\compatibility134036509386498059 1
@@ -65,7 +65,7 @@
 63D:\api-microsaas-template-1\Dev-Tools-Conglomerate\package.json134036537567072120 0
 105D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\caniuse-lite\data\features\eventsource.js134036510608916073 0
 109D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\rxjs\dist\esm\internal\operators\skipUntil.js134036511159204826 0
-64D:\api-microsaas-template-1\Dev-Tools-Conglomerate\all-apis.html134055667561919612 0
+64D:\api-microsaas-template-1\Dev-Tools-Conglomerate\all-apis.html134056015127592182 0
 123D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\regenerate-unicode-properties\Script_Extensions\Tagbanwa.js134036510763987466 0
 93D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\istanbul-lib-coverage\LICENSE134036508210332869 0
 108D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\rxjs\dist\esm5\internal\operators\map.js.map134036511409570137 0
@@ -201,7 +201,7 @@
 82D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\lodash\isLength.js134036511146364704 0
 61D:\api-microsaas-template-1\Dev-Tools-Conglomerate\legal.html134055648966068729 0
 83D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\lodash\fp\toPath.js134036511325432918 0
-63D:\api-microsaas-template-1\Dev-Tools-Conglomerate\DevTools.txt134055616238600186 0
+63D:\api-microsaas-template-1\Dev-Tools-Conglomerate\DevTools.txt134055684147100899 0
 89D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\postcss-normalize-charset134036508573937367 1
 101D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\cypress\types\lodash\fp\constant.d.ts134036511181795076 0
 82D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\lodash\toString.js134036511329311890 0
@@ -212,7 +212,7 @@
 84D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\resolve-from\license134036508289766495 0
 101D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\yaml\browser\dist\schema\core\bool.js134036508705612801 0
 73D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\is-number134036508282232608 1
-55D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist134055682227547781 1
+55D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist134056028068691104 1
 75D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\.bin\nanoid134036511502994206 0
 95D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\caniuse-lite\data\regions\VU.js134036511236573915 0
 109D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\rxjs\dist\types\internal\observable\race.d.ts134036511485107301 0
@@ -339,7 +339,7 @@
 125D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\rxjs\dist\esm5\internal\scheduler\VirtualTimeScheduler.js.map134036511447762241 0
 89D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\postcss-normalize-unicode134036508573907362 1
 106D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\common-tags\lib\TemplateTag\TemplateTag.js134036509636670829 0
-65D:\api-microsaas-template-1\Dev-Tools-Conglomerate\src\js\main.js134040081674780408 0
+65D:\api-microsaas-template-1\Dev-Tools-Conglomerate\src\js\main.js134056022289311435 0
 69D:\api-microsaas-template-1\Dev-Tools-Conglomerate\src\css\styles.css134040073360762086 0
 119D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\make-dir\node_modules\semver\functions\compare-build.js134036508409912324 0
 123D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\regenerate-unicode-properties\General_Category\Separator.js134036510611882669 0
@@ -14814,7 +14814,7 @@
 82D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\css-tree\README.md134036510392201188 0
 113D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\cssstyle\lib\properties\webkitBorderAfterColor.js134036509378510898 0
 89D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\dayjs\esm\locale\sv-fi.js134036510602563409 0
-69D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\all-apis.html134055682226637770 0
+69D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\all-apis.html134056028066912374 0
 86D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\dayjs\esm\locale\sv.js134036510606436573 0
 96D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\cypress\types\lodash\remove.d.ts134036510615160977 0
 107D:\api-microsaas-template-1\Dev-Tools-Conglomerate\node_modules\@swc\helpers\src\_sliced_to_array_loose.mjs134036511034827485 0
@@ -19892,6 +19892,8 @@
 85D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\all-apis.32d69a3e.js.19148.1p134036585990113320 0
 80D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\all-apis.32d69a3e.js.map134040187407321926 0
 88D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\all-apis.32d69a3e.js.map.8612.1o134040138721759688 0
+76D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\all-apis.b828852a.js134056028068195393 0
+80D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\all-apis.b828852a.js.map134056028068667090 0
 76D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\blog.e3045697.js.map134055498930087214 0
 65D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\blog.html134055682226627802 0
 77D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\community.5d1acc8c.js134055498929154557 0
@@ -19917,7 +19919,7 @@
 77D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\legal.b2cb84c8.js.map134055498930087214 0
 66D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\legal.html134055682226637770 0
 113D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\Sleek Tech Logo with Circuit-Inspired Design.cda61b50.png134055498930775579 0
-70D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\js\main.min.js134055681821501292 0
+70D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\js\main.min.js134056027737656932 0
 74D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\css\styles.min.css134040536410437369 0
 100D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\assets\DevTools Conglomerate Tech Logo 1.png134040536114512277 0
 116D:\api-microsaas-template-1\Dev-Tools-Conglomerate\dist\assets\Modern Tech Logo with Deep Blue and Violet Colors.png134040536124937798 0
