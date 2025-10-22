@@ -167,6 +167,40 @@
         <!-- Main Section -->
         <main class="flex-1 p-6">
             <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">All APIs</h2>
+
+            <!-- Search and Filter Section -->
+            <div class="mb-8 bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div>
+                        <label for="search-input" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Search APIs</label>
+                        <input type="text" id="search-input" placeholder="Search tools..." class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-800 dark:text-white">
+                    </div>
+                    <div>
+                        <label for="category-filter" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Category</label>
+                        <select id="category-filter" class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-800 dark:text-white">
+                            <option value="">All Categories</option>
+                            <option value="security">Security & Code Quality</option>
+                            <option value="data">Data & Format Conversion</option>
+                            <option value="devops">DevOps & Infrastructure</option>
+                            <option value="algorithm">Algorithm & Helper Functions</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="status-filter" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Status</label>
+                        <select id="status-filter" class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-800 dark:text-white">
+                            <option value="">All Statuses</option>
+                            <option value="in-progress">In Progress</option>
+                            <option value="completed">Completed</option>
+                            <option value="planned">Planned</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mt-4 flex justify-between items-center">
+                    <span id="results-count" class="text-sm text-gray-600 dark:text-gray-400">Showing all APIs</span>
+                    <button id="clear-filters" class="text-indigo-600 hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-300 text-sm font-medium">Clear Filters</button>
+                </div>
+            </div>
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Security & Code Quality -->
                 <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View SQL Injection Scanner details">

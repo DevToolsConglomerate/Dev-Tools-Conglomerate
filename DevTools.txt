@@ -41,15 +41,6 @@ Algorithm & Helper Functions:
 
 ## Functionalities to Implement
 
-### 2. Interactive API Playground
-- **Description**: Add a live code editor on the All APIs page for testing API endpoints.
-- **Why**: Allows users to test APIs directly without leaving the site.
-- **Tasks**:
-  - Create a new section on all-apis.html with a simple code editor (textarea-based).
-  - Add JavaScript to handle API requests via fetch().
-  - Display request/response in formatted JSON.
-  - Include pre-filled examples for each API.
-
 ### 3. Search and Filtering for APIs
 - **Description**: Implement search bar and filters on the All APIs page.
 - **Why**: Makes navigation easier for users with specific needs.

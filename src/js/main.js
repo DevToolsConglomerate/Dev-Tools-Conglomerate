@@ -132,6 +132,108 @@ function scanForXSS(input) {
     return xssPattern.test(input);
 }
 
+// Search and Filter functionality for APIs
+export function initAPISearchFilter() {
+    const searchInput = document.getElementById('search-input');
+    const categoryFilter = document.getElementById('category-filter');
+    const statusFilter = document.getElementById('status-filter');
+    const clearFiltersBtn = document.getElementById('clear-filters');
+    const resultsCount = document.getElementById('results-count');
+    const apiCards = document.querySelectorAll('.grid > div');
+
+    if (!searchInput || !categoryFilter || !statusFilter || !apiCards.length) {
+        return; // Elements not found, skip initialization
+    }
+
+    // Define categories for each API card
+    const apiCategories = {
+        'SQL Injection Scanner': 'security',
+        'SEO Meta Validator': 'security',
+        'Code Complexity Analyzer': 'security',
+        'Dependency Vulnerability Checker': 'security',
+        'JSON-to-XML Converter': 'data',
+        'YAML Validator Formatter': 'data',
+        'CSV-to-JSON API': 'data',
+        'Image Format Converter': 'data',
+        'PDF Text Extractor': 'data',
+        'Dockerfile Generator': 'devops',
+        'Nginx Config Generator': 'devops',
+        'Let\'s Encrypt Bot Simulator': 'devops',
+        'Git Command Helper': 'devops',
+        'UUID Generator': 'algorithm',
+        'Password Strength API': 'algorithm',
+        'Hash Generator': 'algorithm',
+        'Unit Test Generator': 'algorithm',
+        'Color Converter API': 'algorithm',
+        'Fake User Generator': 'algorithm'
+    };
+
+    // Filter function
+    function filterAPIs() {
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        const selectedCategory = categoryFilter.value;
+        const selectedStatus = statusFilter.value;
+
+        let visibleCount = 0;
+
+        apiCards.forEach(card => {
+            const title = card.querySelector('h3').textContent.toLowerCase();
+            const description = card.querySelector('p').textContent.toLowerCase();
+            const statusBadge = card.querySelector('span').textContent.toLowerCase().replace(/\s+/g, '-');
+            const apiName = card.querySelector('h3').textContent.trim();
+            const category = apiCategories[apiName] || '';
+
+            // Check search term
+            const matchesSearch = !searchTerm ||
+                title.includes(searchTerm) ||
+                description.includes(searchTerm) ||
+                apiName.toLowerCase().includes(searchTerm);
+
+            // Check category
+            const matchesCategory = !selectedCategory || category === selectedCategory;
+
+            // Check status
+            const matchesStatus = !selectedStatus ||
+                (selectedStatus === 'in-progress' && statusBadge.includes('progress')) ||
+                (selectedStatus === 'completed' && statusBadge.includes('completed')) ||
+                (selectedStatus === 'planned' && statusBadge.includes('planned'));
+
+            // Show/hide card
+            if (matchesSearch && matchesCategory && matchesStatus) {
+                card.style.display = 'block';
+                visibleCount++;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        // Update results count
+        const totalCount = apiCards.length;
+        if (visibleCount === totalCount) {
+            resultsCount.textContent = `Showing all ${totalCount} APIs`;
+        } else {
+            resultsCount.textContent = `Showing ${visibleCount} of ${totalCount} APIs`;
+        }
+    }
+
+    // Clear filters function
+    function clearFilters() {
+        searchInput.value = '';
+        categoryFilter.value = '';
+        statusFilter.value = '';
+        filterAPIs();
+    }
+
+    // Event listeners
+    searchInput.addEventListener('input', filterAPIs);
+    categoryFilter.addEventListener('change', filterAPIs);
+    statusFilter.addEventListener('change', filterAPIs);
+    clearFiltersBtn.addEventListener('click', clearFilters);
+
+    // Initial filter call to set up results count
+    filterAPIs();
+}
+
 // Initialize all features
 export function init() {
     initNavToggle();
@@ -139,6 +241,7 @@ export function init() {
     initFadeIn();
     initSearch();
     initXSSScannerDemo();
+    initAPISearchFilter();
 
     // Test dark mode compatibility for new elements
     const demoSection = document.getElementById('scan-xss');
