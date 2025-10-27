@@ -4,6 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevTools Conglomerate - About</title>
+    <meta name="description" content="Learn about DevTools Conglomerate - an open-source initiative providing comprehensive backend and API development tools built with Python FastAPI.">
+    <meta name="keywords" content="DevTools Conglomerate, about, open-source, FastAPI, backend tools, API development">
+    <meta name="author" content="DevTools Conglomerate">
+
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#4f46e5">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="DevTools">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="msapplication-TileColor" content="#4f46e5">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+
+    <!-- PWA Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/DevTools Conglomerate Tech Logo 1.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/DevTools Conglomerate Tech Logo 1.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/DevTools Conglomerate Tech Logo 1.png">
+    <link rel="mask-icon" href="assets/DevTools Conglomerate Tech Logo 1.png" color="#4f46e5">
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://devtoolsconglomerate.com/about.html">
+    <meta property="og:title" content="DevTools Conglomerate - About">
+    <meta property="og:description" content="Learn about DevTools Conglomerate - an open-source initiative providing comprehensive backend and API development tools.">
+    <meta property="og:image" content="https://devtoolsconglomerate.com/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://devtoolsconglomerate.com/about.html">
+    <meta property="twitter:title" content="DevTools Conglomerate - About">
+    <meta property="twitter:description" content="Learn about DevTools Conglomerate - an open-source initiative providing comprehensive backend and API development tools.">
+    <meta property="twitter:image" content="https://devtoolsconglomerate.com/og-image.png">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -91,6 +125,32 @@
         }
 
         themeToggle.addEventListener('click', toggleTheme);
+
+        // Service Worker Registration
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((registration) => {
+                        console.log('Service Worker registered successfully:', registration.scope);
+
+                        // Check for updates
+                        registration.addEventListener('updatefound', () => {
+                            const newWorker = registration.installing;
+                            newWorker.addEventListener('statechange', () => {
+                                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                    // New content is available, notify user
+                                    if (confirm('New content is available. Reload to update?')) {
+                                        window.location.reload();
+                                    }
+                                }
+                            });
+                        });
+                    })
+                    .catch((error) => {
+                        console.log('Service Worker registration failed:', error);
+                    });
+            });
+        }
     </script>
 
     <!-- Main Content -->

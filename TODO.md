@@ -7,6 +7,7 @@
 - [x] Create manifest.json for PWA metadata
 - [x] Add service worker for caching and offline functionality
 - [x] Update HTML with PWA meta tags and service worker registration
+- [x] Add PWA features to about.html (meta tags, service worker, Open Graph, Twitter cards)
 
 ## Pending Tasks
 - [ ] Test the redesigned dashboard for responsiveness and functionality
