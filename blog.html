@@ -4,6 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevTools Conglomerate - Blog</title>
+
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#4f46e5">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="DevTools">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="msapplication-TileColor" content="#4f46e5">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+
+    <!-- PWA Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/DevTools Conglomerate Tech Logo 1.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/DevTools Conglomerate Tech Logo 1.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/DevTools Conglomerate Tech Logo 1.png">
+    <link rel="mask-icon" href="assets/DevTools Conglomerate Tech Logo 1.png" color="#4f46e5">
+    <link rel="manifest" href="manifest.json">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -26,7 +43,7 @@
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
                     <img src="assets/DevTools Conglomerate Tech Logo 1.png" alt="DevTools Logo" class="w-8 h-8 mr-2">
-                    <h2 class="text-2xl font-bold text-indigo-600">DevTools</h2>
+                    <h2 class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">DevTools</h2>
                 </div>
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
@@ -91,6 +108,19 @@
         }
 
         themeToggle.addEventListener('click', toggleTheme);
+
+        // Register service worker for PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((registration) => {
+                        console.log('Service Worker registered successfully:', registration.scope);
+                    })
+                    .catch((error) => {
+                        console.log('Service Worker registration failed:', error);
+                    });
+            });
+        }
     </script>
 
     <!-- Main Content -->

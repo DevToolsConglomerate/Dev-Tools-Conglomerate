@@ -39,15 +39,7 @@ Algorithm & Helper Functions:
 ## Tasks
 - [ ] Update index.html: Change initial theme toggle icons to sun, ensure JS handles all toggles
 
-## Functionalities to Implement
 
-### 3. Search and Filtering for APIs
-- **Description**: Implement search bar and filters on the All APIs page.
-- **Why**: Makes navigation easier for users with specific needs.
-- **Tasks**:
-  - Add search input and filter dropdowns (category, language).
-  - Implement JavaScript filtering logic.
-  - Update the API list dynamically based on search/filter criteria.
 
 ### 4. Progressive Web App (PWA) Features
 - **Description**: Enable offline access and installability.
@@ -117,3 +109,5 @@ Algorithm & Helper Functions:
 - JavaScript should be modular and avoid global pollution.
 - Prepare code for easy backend integration (e.g., replace localStorage with API calls).
 - Ensure performance is not impacted (lazy load heavy features if needed).
+
+

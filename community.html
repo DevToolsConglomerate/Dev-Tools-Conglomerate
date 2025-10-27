@@ -4,6 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevTools Conglomerate - Community</title>
+
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#4f46e5">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="DevTools">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="msapplication-TileColor" content="#4f46e5">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+
+    <!-- PWA Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/DevTools Conglomerate Tech Logo 1.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/DevTools Conglomerate Tech Logo 1.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/DevTools Conglomerate Tech Logo 1.png">
+    <link rel="mask-icon" href="assets/DevTools Conglomerate Tech Logo 1.png" color="#4f46e5">
+    <link rel="manifest" href="manifest.json">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -25,7 +42,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
-                    <img src="assets/Sleek Tech Logo with Circuit-Inspired Design.png" alt="DevTools Logo" class="w-8 h-8 mr-2">
+                    <img src="assets/DevTools Conglomerate Tech Logo 1.png" alt="DevTools Logo" class="w-8 h-8 mr-2">
                     <h2 class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">DevTools</h2>
                 </div>
                 <!-- Desktop Menu -->
@@ -260,6 +277,20 @@
             };
             document.getElementById('dataOutput').innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
         });
+    </script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    }, function(err) {
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+            });
+        }
     </script>
 </body>
 </html>

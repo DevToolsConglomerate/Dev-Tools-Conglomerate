@@ -7,6 +7,22 @@
     <meta name="description" content="A comprehensive suite of backend and API development tools built with Python FastAPI. Accelerate prototyping, enhance security, and save time with prebuilt APIs.">
     <meta name="keywords" content="API tools, development tools, FastAPI, backend development, security scanner, data conversion, DevOps, utilities">
     <meta name="author" content="DevTools Conglomerate">
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#4f46e5">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="DevTools">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="msapplication-TileColor" content="#4f46e5">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+
+    <!-- PWA Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/DevTools Conglomerate Tech Logo 1.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/DevTools Conglomerate Tech Logo 1.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/DevTools Conglomerate Tech Logo 1.png">
+    <link rel="mask-icon" href="assets/DevTools Conglomerate Tech Logo 1.png" color="#4f46e5">
+    <link rel="manifest" href="manifest.json">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://devtoolsconglomerate.com/">
@@ -41,7 +57,7 @@
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
                     <img src="assets/Sleek Tech Logo with Circuit-Inspired Design.png" alt="DevTools Logo" class="w-8 h-8 mr-2">
-                    <a href="index.html" class="text-2xl font-bold text-indigo-600">DevTools</a>
+                    <a href="index.html" class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">DevTools</a>
                 </div>
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
@@ -422,6 +438,32 @@
             mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
             mobileMenu.classList.toggle('hidden');
         });
+
+        // Service Worker Registration
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((registration) => {
+                        console.log('Service Worker registered successfully:', registration.scope);
+
+                        // Check for updates
+                        registration.addEventListener('updatefound', () => {
+                            const newWorker = registration.installing;
+                            newWorker.addEventListener('statechange', () => {
+                                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                    // New content is available, notify user
+                                    if (confirm('New content is available. Reload to update?')) {
+                                        window.location.reload();
+                                    }
+                                }
+                            });
+                        });
+                    })
+                    .catch((error) => {
+                        console.log('Service Worker registration failed:', error);
+                    });
+            });
+        }
     </script>
 </body>
 </html>
