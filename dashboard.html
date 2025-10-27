@@ -74,106 +74,406 @@
     </nav>
 
     <!-- Main Content -->
-    <main class="flex-1 p-8 overflow-auto max-w-7xl mx-auto w-full">
-        <h1 class="text-3xl font-bold mb-6 text-charcoal dark:text-white">Dashboard</h1>
+    <main class="flex-1 p-6 overflow-auto max-w-7xl mx-auto w-full">
+        <!-- Header Section -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-2">Welcome to DevTools Conglomerate Dashboard</h1>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">Your central hub for managing and accessing powerful developer tools and APIs.</p>
 
-        <!-- Test Data API Demo -->
-        <section class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg mb-8">
-            <h2 class="text-2xl font-semibold mb-6 text-charcoal dark:text-white">Test Data API Demo</h2>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">Generate random test data for your applications.</p>
-            <button id="generateData" class="bg-sea-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-600 transition mb-6">Generate Random Data</button>
-            <div id="dataOutput" class="bg-gray-100 dark:bg-gray-600 p-4 rounded-md font-mono text-sm overflow-x-auto">
-                <p class="text-gray-500 dark:text-gray-400">Click "Generate Random Data" to see sample output.</p>
+            <!-- Key Metrics -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+                <div class="bg-white dark:bg-gray-700 p-4 rounded-lg shadow-md">
+                    <div class="flex items-center">
+                        <svg class="w-8 h-8 text-indigo-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                        <div>
+                            <p class="text-sm text-gray-600 dark:text-gray-300">Total APIs</p>
+                            <p class="text-2xl font-bold text-gray-900 dark:text-white">24</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-700 p-4 rounded-lg shadow-md">
+                    <div class="flex items-center">
+                        <svg class="w-8 h-8 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <div>
+                            <p class="text-sm text-gray-600 dark:text-gray-300">Completed</p>
+                            <p class="text-2xl font-bold text-gray-900 dark:text-white">2</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-700 p-4 rounded-lg shadow-md">
+                    <div class="flex items-center">
+                        <svg class="w-8 h-8 text-yellow-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <div>
+                            <p class="text-sm text-gray-600 dark:text-gray-300">In Progress</p>
+                            <p class="text-2xl font-bold text-gray-900 dark:text-white">22</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-700 p-4 rounded-lg shadow-md">
+                    <div class="flex items-center">
+                        <svg class="w-8 h-8 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                        </svg>
+                        <div>
+                            <p class="text-sm text-gray-600 dark:text-gray-300">Recent Usage</p>
+                            <p class="text-2xl font-bold text-gray-900 dark:text-white">1.2K</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
 
-        <!-- Tool Cards Grid -->
-        <section>
-            <h2 class="text-2xl font-semibold mb-4 text-charcoal dark:text-white">Security Tools</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow hover:shadow-xl transform hover:-translate-y-1 transition cursor-pointer">
+        <!-- Overview Cards -->
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Overview</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Security & Code Quality</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Tools for scanning vulnerabilities and improving code quality.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500 dark:text-gray-400">5 tools</span>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Explore</button>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Data & Format Conversion</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Convert and validate various data formats.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500 dark:text-gray-400">5 tools</span>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Explore</button>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">DevOps & Infrastructure</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Automate deployments and manage infrastructure.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500 dark:text-gray-400">4 tools</span>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Explore</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Expanded Tool Grid -->
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">All Tools & APIs</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Completed APIs -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View Test Data API details">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 text-teal-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M4 3a1 1 0 00-1 1v12a1 1 0 001 1h12a1 1 0 001-1V4a1 1 0 00-1-1H4z"/>
+                        </svg>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Test Data API</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Provides test data for various scenarios.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">Completed</span>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Try Now</button>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View API Factory Orchestrator details">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 text-teal-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M4 3a1 1 0 00-1 1v12a1 1 0 001 1h12a1 1 0 001-1V4a1 1 0 00-1-1H4z"/>
+                        </svg>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">API Factory Orchestrator</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Orchestrates API factory workflows.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">Completed</span>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Try Now</button>
+                    </div>
+                </div>
+                <!-- In Progress APIs -->
+                <!-- Security & Code Quality -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View XSS Scanner details">
                     <div class="flex items-center mb-4">
                         <svg class="w-8 h-8 text-red-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
                         </svg>
-                        <h3 class="text-xl font-bold text-charcoal dark:text-white">XSS Scanner</h3>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">XSS Scanner</h3>
                     </div>
                     <p class="text-gray-600 dark:text-gray-300 mb-4">Detects Cross-Site Scripting vulnerabilities.</p>
-                    <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
-                    <a href="https://github.com/DevToolsConglomerate/xss-scanner" target="_blank" class="mt-4 w-full bg-sea-blue text-white py-2 rounded hover:bg-teal-600 transition inline-block text-center">Try Now</a>
-                </div>
-                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow hover:shadow-xl transform hover:-translate-y-1 transition cursor-pointer">
-                    <div class="flex items-center mb-4">
-                        <svg class="w-8 h-8 text-teal-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M4 3a1 1 0 00-1 1v12a1 1 0 001 1h12a1 1 0 001-1V4a1 1 0 00-1-1H4z"/>
-                        </svg>
-                        <h3 class="text-xl font-bold text-charcoal dark:text-white">Test Data API</h3>
+                    <div class="flex justify-between items-center">
+                        <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Try Now</button>
                     </div>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4">Provides test data for various scenarios.</p>
-                    <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">Completed</span>
-                    <a href="https://github.com/DevToolsConglomerate/test-data-api" target="_blank" class="mt-4 w-full bg-sea-blue text-white py-2 rounded hover:bg-teal-600 transition inline-block text-center">Try Now</a>
                 </div>
-                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow hover:shadow-xl transform hover:-translate-y-1 transition cursor-pointer">
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View SQL Injection Scanner details">
                     <div class="flex items-center mb-4">
-                        <svg class="w-8 h-8 text-teal-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M4 3a1 1 0 00-1 1v12a1 1 0 001 1h12a1 1 0 001-1V4a1 1 0 00-1-1H4z"/>
+                        <svg class="w-8 h-8 text-red-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 1L3 4v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V4l-7-3z" clip-rule="evenodd"/>
                         </svg>
-                        <h3 class="text-xl font-bold text-charcoal dark:text-white">API Factory Orchestrator</h3>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">SQL Injection Scanner</h3>
                     </div>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4">Orchestrates API factory workflows.</p>
-                    <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">Completed</span>
-                    <a href="https://github.com/DevToolsConglomerate/api-factory-orchestrator" target="_blank" class="mt-4 w-full bg-sea-blue text-white py-2 rounded hover:bg-teal-600 transition inline-block text-center">Try Now</a>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Detects SQL injection vulnerabilities in code strings.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Try Now</button>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View SEO Meta Validator details">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 text-red-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 1L3 4v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V4l-7-3z" clip-rule="evenodd"/>
+                        </svg>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">SEO Meta Validator</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Analyzes and suggests improvements for HTML meta tags.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Try Now</button>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View Code Complexity Analyzer details">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 text-red-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 1L3 4v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V4l-7-3z" clip-rule="evenodd"/>
+                        </svg>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Code Complexity Analyzer</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Calculates cyclomatic complexity for a function.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Try Now</button>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View Dependency Vulnerability Checker details">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Dependency Vulnerability Checker</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Checks package.json/requirements.txt against known vulnerabilities.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Try Now</button>
+                    </div>
+                </div>
+
+                <!-- Data & Format Conversion -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View JSON-to-XML Converter details">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">JSON-to-XML Converter</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Converts JSON to XML and vice-versa.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Try Now</button>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View YAML Validator Formatter details">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">YAML Validator Formatter</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Validates and beautifies YAML.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Try Now</button>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View CSV-to-JSON API details">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">CSV-to-JSON API</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Converts CSV strings to JSON arrays.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Try Now</button>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View Image Format Converter details">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Image Format Converter</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Converts image formats using free tier services.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Try Now</button>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View PDF Text Extractor details">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">PDF Text Extractor</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Extracts text from PDF files.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Try Now</button>
+                    </div>
+                </div>
+
+                <!-- DevOps & Infrastructure -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View Dockerfile Generator details">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Dockerfile Generator</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Generates a Dockerfile based on language and framework.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Try Now</button>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View Nginx Config Generator details">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Nginx Config Generator</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Creates a basic Nginx config for a web app.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Try Now</button>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View Let's Encrypt Bot Simulator details">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Let's Encrypt Bot Simulator</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Simulates the certificate issuance process for troubleshooting.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Try Now</button>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View Git Command Helper details">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Git Command Helper</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Explains complex git commands in simple terms.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Try Now</button>
+                    </div>
+                </div>
+
+                <!-- Algorithm & Helper Functions -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View UUID Generator details">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">UUID Generator</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Generates batches of UUIDs.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Try Now</button>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View Password Strength API details">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Password Strength API</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Checks password strength and breaches.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Try Now</button>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View Hash Generator details">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Hash Generator</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Hashes text with multiple algorithms (MD5, SHA256, etc.).</p>
+                    <div class="flex justify-between items-center">
+                        <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Try Now</button>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View Unit Test Generator details">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Unit Test Generator</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Generates basic unit test skeletons for simple functions.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Try Now</button>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View Color Converter API details">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Color Converter API</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Converts between HEX, RGB, HSL, etc.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Try Now</button>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer" tabindex="0" role="button" aria-label="View Fake User Generator details">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 text-purple-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Fake User Generator</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Generates fake user data for testing.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Try Now</button>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Quick Actions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <button class="bg-indigo-600 text-white p-4 rounded-lg shadow-md hover:bg-indigo-700 transition flex items-center justify-center">
+                    <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                    </svg>
+                    Generate Test Data
+                </button>
+                <button class="bg-indigo-600 text-white p-4 rounded-lg shadow-md hover:bg-indigo-700 transition flex items-center justify-center">
+                    <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
+                    </svg>
+                    View All APIs
+                </button>
+                <button class="bg-indigo-600 text-white p-4 rounded-lg shadow-md hover:bg-indigo-700 transition flex items-center justify-center">
+                    <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                    </svg>
+                    Access Docs
+                </button>
+                <button class="bg-indigo-600 text-white p-4 rounded-lg shadow-md hover:bg-indigo-700 transition flex items-center justify-center">
+                    <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    Get Help
+                </button>
+            </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Recent Activity</h2>
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg">
+                <ul class="space-y-4">
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <div>
+                            <p class="text-gray-900 dark:text-white">Test Data API used successfully</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-300">2 hours ago</p>
+                        </div>
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                        </svg>
+                        <div>
+                            <p class="text-gray-900 dark:text-white">New API Factory Orchestrator deployed</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-300">1 day ago</p>
+                        </div>
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-yellow-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                        </svg>
+                        <div>
+                            <p class="text-gray-900 dark:text-white">XSS Scanner updated with new patterns</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-300">3 days ago</p>
+                        </div>
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-purple-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <div>
+                            <p class="text-gray-900 dark:text-white">Community contribution merged</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-300">1 week ago</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </main>
 
-    <script>
-        // Theme toggle functionality
-        const themeToggle = document.getElementById('theme-toggle');
-        const themeToggleMobile = document.getElementById('theme-toggle-mobile');
-
-        function toggleTheme() {
-            document.documentElement.classList.toggle('dark');
-            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
-        }
-
-        // Load saved theme
-        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-        }
-
-        themeToggle.addEventListener('click', toggleTheme);
-        themeToggleMobile.addEventListener('click', toggleTheme);
-
-        // Test Data Generation
-        document.getElementById('generateData').addEventListener('click', function() {
-            const data = {
-                id: Math.floor(Math.random() * 1000),
-                name: ['John Doe', 'Jane Smith', 'Alice Johnson', 'Bob Wilson'][Math.floor(Math.random() * 4)],
-                email: `user${Math.floor(Math.random() * 100)}@example.com`,
-                age: Math.floor(Math.random() * 50) + 18,
-                address: {
-                    street: `${Math.floor(Math.random() * 1000)} Main St`,
-                    city: ['New York', 'Los Angeles', 'Chicago', 'Houston'][Math.floor(Math.random() * 4)],
-                    zipCode: `${Math.floor(Math.random() * 90000) + 10000}`
-                },
-                createdAt: new Date().toISOString()
-            };
-            document.getElementById('dataOutput').innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
-        });
-    </script>
-
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12 px-4">
-        <div class="max-w-7xl mx-auto">
+    <footer class="bg-gray-800 dark:bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="text-lg font-bold mb-4">DevTools Conglomerate</h3>
-                    <p class="text-gray-400">Empowering developers with powerful backend tools and APIs.</p>
+                    <h3 class="text-lg font-semibold mb-4">DevTools Conglomerate</h3>
+                    <p class="text-gray-400">A comprehensive suite of developer tools and APIs to streamline your workflow.</p>
                 </div>
                 <div>
-                    <h4 class="text-md font-semibold mb-4">Resources</h4>
+                    <h4 class="text-md font-semibold mb-4">Quick Links</h4>
                     <ul class="space-y-2">
                         <li><a href="docs.html" class="text-gray-400 hover:text-white transition">Documentation</a></li>
                         <li><a href="all-apis.html" class="text-gray-400 hover:text-white transition">All APIs</a></li>
@@ -232,6 +532,25 @@
             mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
             mobileMenu.classList.toggle('hidden');
         });
+
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+            const isDark = document.documentElement.classList.contains('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        }
+
+        themeToggle.addEventListener('click', toggleTheme);
+        themeToggleMobile.addEventListener('click', toggleTheme);
+
+        // Initialize theme based on saved preference or system preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        }
     </script>
 </body>
 </html>
