@@ -1,0 +1,28 @@
+{
+  "name": "DevTools Conglomerate",
+  "short_name": "DevTools",
+  "description": "A comprehensive suite of developer tools and APIs to streamline your workflow",
+  "start_url": "/dashboard.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4f46e5",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "assets/DevTools Conglomerate Tech Logo 1.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/DevTools Conglomerate Tech Logo 1.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["developer-tools", "productivity", "utilities"],
+  "lang": "en-US",
+  "dir": "ltr"
+}
