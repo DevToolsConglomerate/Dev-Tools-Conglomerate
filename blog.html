@@ -84,7 +84,7 @@
         </div>
     </nav>
 
-    <script>
+    <script type="module">
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
 
@@ -94,25 +94,51 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Theme toggle functionality
-        const themeToggle = document.getElementById('theme-toggle');
-
         function toggleTheme() {
-            document.documentElement.classList.toggle('dark');
-            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+            const html = document.documentElement;
+            const isDark = html.classList.contains('dark');
+
+            if (isDark) {
+                html.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                updateThemeIcon(false);
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                updateThemeIcon(true);
+            }
+        }
+
+        function updateThemeIcon(isDark) {
+            const icons = document.querySelectorAll('#theme-toggle svg');
+            icons.forEach(icon => {
+                if (isDark) {
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>';
+                } else {
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>';
+                }
+            });
         }
 
         // Load saved theme
-        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
             document.documentElement.classList.add('dark');
+            updateThemeIcon(true);
+        } else {
+            updateThemeIcon(false);
         }
 
-        themeToggle.addEventListener('click', toggleTheme);
+        // Add event listener to theme toggle button
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) {
+            themeToggle.addEventListener('click', toggleTheme);
+        }
 
         // Register service worker for PWA
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
+                navigator.serviceWorker.register(new URL('/sw.js', import.meta.url))
                     .then((registration) => {
                         console.log('Service Worker registered successfully:', registration.scope);
                     })

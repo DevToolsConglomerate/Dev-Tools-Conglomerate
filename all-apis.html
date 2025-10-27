@@ -124,7 +124,7 @@
             });
         </script>
 
-        <script>
+        <script type="module">
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
 
@@ -183,7 +183,7 @@
             // Service Worker Registration
             if ('serviceWorker' in navigator) {
                 window.addEventListener('load', () => {
-                    navigator.serviceWorker.register('/sw.js')
+                    navigator.serviceWorker.register(new URL('/sw.js', import.meta.url))
                         .then((registration) => {
                             console.log('Service Worker registered successfully:', registration.scope);
 

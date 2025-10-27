@@ -89,11 +89,9 @@
         </div>
     </nav>
 
-    <script>
+    <script type="module">
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        const themeToggle = document.getElementById('theme-toggle');
-        const themeToggleMobile = document.getElementById('theme-toggle-mobile');
 
         mobileMenuButton.addEventListener('click', () => {
             const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
@@ -102,10 +100,18 @@
         });
 
         function toggleTheme() {
-            document.documentElement.classList.toggle('dark');
-            const isDark = document.documentElement.classList.contains('dark');
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-            updateThemeIcon(isDark);
+            const html = document.documentElement;
+            const isDark = html.classList.contains('dark');
+
+            if (isDark) {
+                html.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                updateThemeIcon(false);
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                updateThemeIcon(true);
+            }
         }
 
         function updateThemeIcon(isDark) {
@@ -119,20 +125,21 @@
             });
         }
 
-        // Check for saved theme preference or default to light mode
-        const savedTheme = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const isDark = savedTheme === 'dark' || (!savedTheme && prefersDark);
-
-        if (isDark) {
+        // Load saved theme
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
             document.documentElement.classList.add('dark');
+            updateThemeIcon(true);
+        } else {
+            updateThemeIcon(false);
         }
-        updateThemeIcon(isDark);
 
         // Add event listeners to theme toggle buttons
+        const themeToggle = document.getElementById('theme-toggle');
         if (themeToggle) {
             themeToggle.addEventListener('click', toggleTheme);
         }
+        const themeToggleMobile = document.getElementById('theme-toggle-mobile');
         if (themeToggleMobile) {
             themeToggleMobile.addEventListener('click', toggleTheme);
         }
@@ -140,7 +147,7 @@
         // Service Worker Registration
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
+                navigator.serviceWorker.register(new URL('/sw.js', import.meta.url))
                     .then((registration) => {
                         console.log('Service Worker registered successfully:', registration.scope);
 

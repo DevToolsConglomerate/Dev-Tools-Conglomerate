@@ -14,6 +14,10 @@
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "@babel/preset-env": "^7.20.0",
+    "@parcel/packager-raw-url": "^2.16.0",
+    "@parcel/packager-xml": "^2.16.0",
+    "@parcel/transformer-webmanifest": "^2.16.0",
+    "@parcel/transformer-xml": "^2.16.0",
     "babel-jest": "^29.0.0",
     "cssnano": "^6.0.0",
     "cypress": "^12.0.0",
@@ -26,6 +30,8 @@
   },
   "jest": {
     "testEnvironment": "jsdom",
-    "setupFilesAfterEnv": ["<rootDir>/src/js/test-setup.js"]
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/js/test-setup.js"
+    ]
   }
 }

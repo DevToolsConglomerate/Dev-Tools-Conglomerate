@@ -33,14 +33,6 @@ Algorithm & Helper Functions:
 
 
 
-
-# Theme Toggle Icon Consistency and Mobile Menu Updates
-
-## Tasks
-- [ ] Update index.html: Change initial theme toggle icons to sun, ensure JS handles all toggles
-
-
-
 ### 4. Progressive Web App (PWA) Features
 - **Description**: Enable offline access and installability.
 - **Why**: Enhances mobile experience and user engagement.

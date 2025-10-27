@@ -376,22 +376,7 @@
         </div>
     </footer>
 
-    <script>
-        // Theme toggle functionality
-        const themeToggle = document.getElementById('theme-toggle');
-
-        // Check for saved theme preference or default to light mode
-        const currentTheme = localStorage.getItem('theme') || 'light';
-
-        // Apply the current theme to the document
-        if (currentTheme === 'dark') {
-            document.documentElement.classList.add('dark');
-            updateThemeIcons(true);
-        } else {
-            updateThemeIcons(false);
-        }
-
-        // Function to toggle theme
+    <script type="module">
         function toggleTheme() {
             const html = document.documentElement;
             const isDark = html.classList.contains('dark');
@@ -409,7 +394,7 @@
 
         // Function to update theme icons
         function updateThemeIcons(isDark) {
-            const icons = document.querySelectorAll('#theme-toggle svg');
+            const icons = document.querySelectorAll('#theme-toggle svg, #theme-toggle-mobile svg');
             icons.forEach(icon => {
                 if (isDark) {
                     icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>';
@@ -419,7 +404,17 @@
             });
         }
 
+        // Load saved theme
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+            updateThemeIcons(true);
+        } else {
+            updateThemeIcons(false);
+        }
+
         // Add event listeners to theme toggle buttons
+        const themeToggle = document.getElementById('theme-toggle');
         if (themeToggle) {
             themeToggle.addEventListener('click', toggleTheme);
         }
@@ -442,7 +437,7 @@
         // Service Worker Registration
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
+                navigator.serviceWorker.register(new URL('/sw.js', import.meta.url))
                     .then((registration) => {
                         console.log('Service Worker registered successfully:', registration.scope);
 
