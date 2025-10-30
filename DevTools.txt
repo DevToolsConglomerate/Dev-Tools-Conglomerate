@@ -33,14 +33,6 @@ Algorithm & Helper Functions:
 
 
 
-### 4. Progressive Web App (PWA) Features
-- **Description**: Enable offline access and installability.
-- **Why**: Enhances mobile experience and user engagement.
-- **Tasks**:
-  - Create manifest.json for app metadata.
-  - Add service worker for caching static assets.
-  - Update HTML with PWA meta tags.
-  - Test installability on supported browsers.
 
 ### 5. User Authentication Mockup
 - **Description**: Add login/signup forms with localStorage persistence.
